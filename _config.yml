@@ -1,0 +1,13 @@
+title: From the desk of Scott Thornton
+description: Tech notes, musings, and writings
+author: Scott Thornton
+email: scthornton@gmail.com
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Permalink format for blog posts
+permalink: /blog/:year/:month/:day/:title/

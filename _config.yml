@@ -14,7 +14,7 @@ linkedin_username: scthornton
 # Build settings
 markdown: kramdown
 highlighter: rouge
-theme: minima
+remote_theme: mmistakes/minimal-mistakes@4.24.0
 plugins:
   - jekyll-feed
   - jekyll-sitemap

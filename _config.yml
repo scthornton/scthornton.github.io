@@ -1,13 +1,12 @@
 # Site settings
-title: SC Thornton's Tech Blog
-email: your-email@example.com
+title: From the desk of Scott Thornton
+email: 
 description: >-
   Deep dives into AI/ML, Security, Networking, and Python. 
   Tutorials, demos, and practical insights from hands-on experience.
 baseurl: ""
 url: "https://scthornton.github.io"
-author: SC Thornton
-twitter_username: scthornton
+author: Scott Thornton
 github_username: scthornton
 linkedin_username: scthornton
 
@@ -47,15 +46,15 @@ category_descriptions:
     icon: "🤖"
   security:
     name: "Security"
-    description: "Application security, penetration testing, and cybersecurity"
+    description: "Network, AI, Cloud, Application"
     icon: "🔒"
   networking:
     name: "Networking"
-    description: "Network protocols, architecture, and infrastructure"
+    description: "Architecture, Design, Impementation, and Troubleshooting"
     icon: "🌐"
   python:
-    name: "Python"
-    description: "Python programming, libraries, and best practices"
+    name: "Programming"
+    description: "Python, Terraform, useful scripts, programs, projects, and best practices"
     icon: "🐍"
 
 # Defaults

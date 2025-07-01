@@ -1,0 +1,26 @@
+---
+layout: default
+title: Tutorials
+permalink: /tutorials/
+---
+
+<h1>Tutorials</h1>
+<p>In-depth guides and step-by-step tutorials on AI/ML, Security, Networking, and Python.</p>
+
+<div class="tutorials-grid">
+  {% for tutorial in site.tutorials %}
+    <div class="tutorial-card">
+      <h2><a href="{{ tutorial.url }}">{{ tutorial.title }}</a></h2>
+      <div class="tutorial-meta">
+        <span class="difficulty difficulty-{{ tutorial.difficulty }}">{{ tutorial.difficulty }}</span>
+        <span class="date">{{ tutorial.date | date: "%B %Y" }}</span>
+      </div>
+      <p>{{ tutorial.description }}</p>
+      <div class="tutorial-categories">
+        {% for cat in tutorial.categories %}
+          <a href="/category/{{ cat }}" class="category-tag">{{ site.category_descriptions[cat].icon }} {{ cat }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+</div>

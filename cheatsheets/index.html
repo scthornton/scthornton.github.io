@@ -1,0 +1,17 @@
+---
+layout: default
+title: Cheatsheets
+permalink: /cheatsheets/
+---
+
+<h1>Cheatsheets</h1>
+<p>Quick reference guides and command collections for various technologies.</p>
+
+<div class="cheatsheets-grid">
+  {% for sheet in site.cheatsheets %}
+    <a href="{{ sheet.url }}" class="cheatsheet-card">
+      <h3>{{ sheet.title }}</h3>
+      <p>{{ sheet.description }}</p>
+    </a>
+  {% endfor %}
+</div>

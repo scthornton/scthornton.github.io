@@ -1,0 +1,27 @@
+---
+layout: default
+title: "Python"
+permalink: /category/python/
+---
+
+<div class="category-page">
+  <header class="category-header">
+    <h1>{{ site.category_descriptions.python.icon }} {{ site.category_descriptions.python.name }}</h1>
+    <p class="category-description">{{ site.category_descriptions.python.description }}</p>
+  </header>
+
+  <div class="content-sections">
+    <section>
+      <h2>Blog Posts</h2>
+      <div class="posts-list">
+        {% for post in site.categories.python %}
+          <article class="post-item">
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            <time>{{ post.date | date: "%B %d, %Y" }}</time>
+            <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+</div>

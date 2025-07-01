@@ -1,14 +1,92 @@
-title: From the desk of Scott Thornton
-description: Tech notes, musings, and writings
-author: Scott Thornton
-email: scthornton@gmail.com
-github_username:  scthornton
+# Site settings
+title: SC Thornton's Tech Blog
+email: your-email@example.com
+description: >-
+  Deep dives into AI/ML, Security, Networking, and Python. 
+  Tutorials, demos, and practical insights from hands-on experience.
+baseurl: ""
+url: "https://scthornton.github.io"
+author: SC Thornton
+twitter_username: scthornton
+github_username: scthornton
+linkedin_username: scthornton
 
 # Build settings
+markdown: kramdown
+highlighter: rouge
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-paginate
 
-# Permalink format for blog posts
-permalink: /blog/:year/:month/:day/:title/
+# Pagination
+paginate: 10
+paginate_path: "/blog/page:num/"
+
+# Collections
+collections:
+  tutorials:
+    output: true
+    permalink: /tutorials/:title/
+    sort_by: date
+    order: descending
+  cheatsheets:
+    output: true
+    permalink: /cheatsheets/:title/
+  demos:
+    output: true
+    permalink: /demos/:title/
+
+# Category descriptions
+category_descriptions:
+  ai-ml:
+    name: "AI & Machine Learning"
+    description: "Deep learning, neural networks, LLMs, and ML engineering"
+    icon: "🤖"
+  security:
+    name: "Security"
+    description: "Application security, penetration testing, and cybersecurity"
+    icon: "🔒"
+  networking:
+    name: "Networking"
+    description: "Network protocols, architecture, and infrastructure"
+    icon: "🌐"
+  python:
+    name: "Python"
+    description: "Python programming, libraries, and best practices"
+    icon: "🐍"
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true
+  - scope:
+      path: ""
+      type: "tutorials"
+    values:
+      layout: "tutorial"
+      toc: true
+  - scope:
+      path: ""
+      type: "cheatsheets"
+    values:
+      layout: "cheatsheet"
+  - scope:
+      path: ""
+      type: "demos"
+    values:
+      layout: "demo"
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .gitignore
+  - setup-blog.sh

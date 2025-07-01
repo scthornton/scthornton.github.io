@@ -1,0 +1,12 @@
+<div class="post-meta">
+  <time datetime="{{ include.date | date_to_xmlschema }}">
+    {{ include.date | date: "%B %d, %Y" }}
+  </time>
+  {% if include.categories %}
+    {% for category in include.categories %}
+      <a href="/category/{{ category }}" class="category-tag">
+        {{ site.category_descriptions[category].icon }} {{ category }}
+      </a>
+    {% endfor %}
+  {% endif %}
+</div>

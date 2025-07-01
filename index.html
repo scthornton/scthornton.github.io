@@ -1,0 +1,61 @@
+---
+layout: default
+---
+
+<div class="home">
+  <section class="hero">
+    <h1>Welcome to My Tech Blog</h1>
+    <p class="lead">{{ site.description }}</p>
+  </section>
+
+  <!-- Quick Links -->
+  <section class="quick-links">
+    <div class="grid">
+      <a href="/tutorials/" class="card">
+        <h3>📚 Tutorials</h3>
+        <p>Step-by-step guides and in-depth explanations</p>
+      </a>
+      <a href="/cheatsheets/" class="card">
+        <h3>📋 Cheatsheets</h3>
+        <p>Quick reference guides and commands</p>
+      </a>
+      <a href="/demos/" class="card">
+        <h3>🚀 Demos</h3>
+        <p>Live examples and interactive projects</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Recent Posts -->
+  <section class="recent-posts">
+    <h2>Recent Posts</h2>
+    {% for post in site.posts limit:5 %}
+      <article class="post-preview">
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <div class="post-meta">
+          <time>{{ post.date | date: "%B %d, %Y" }}</time>
+          {% for cat in post.categories %}
+            <a href="/category/{{ cat }}" class="category-tag">{{ site.category_descriptions[cat].icon }} {{ cat }}</a>
+          {% endfor %}
+        </div>
+        <p>{{ post.excerpt | strip_html | truncate: 200 }}</p>
+      </article>
+    {% endfor %}
+    <a href="/archive/" class="view-all">View all posts →</a>
+  </section>
+
+  <!-- Featured Tutorials -->
+  <section class="featured-tutorials">
+    <h2>Popular Tutorials</h2>
+    <div class="tutorial-grid">
+      {% assign featured_tutorials = site.tutorials | where: "featured", true | limit: 3 %}
+      {% for tutorial in featured_tutorials %}
+        <div class="tutorial-card">
+          <h3><a href="{{ tutorial.url }}">{{ tutorial.title }}</a></h3>
+          <p>{{ tutorial.description }}</p>
+          <span class="difficulty difficulty-{{ tutorial.difficulty }}">{{ tutorial.difficulty }}</span>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+</div>

@@ -1,0 +1,51 @@
+---
+layout: default
+---
+<article class="tutorial">
+  <header class="tutorial-header">
+    <h1>{{ page.title }}</h1>
+    <div class="tutorial-meta">
+      <span class="difficulty difficulty-{{ page.difficulty }}">{{ page.difficulty | capitalize }}</span>
+      <span class="reading-time">{{ page.content | number_of_words | divided_by: 200 }} min read</span>
+      {% if page.updated %}
+        <span>Updated: {{ page.updated | date: "%B %d, %Y" }}</span>
+      {% endif %}
+    </div>
+    
+    {% if page.prerequisites %}
+    <div class="prerequisites">
+      <h3>Prerequisites</h3>
+      <ul>
+        {% for prereq in page.prerequisites %}
+          <li>{{ prereq }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </header>
+
+  {% if page.toc %}
+  <nav class="toc">
+    <h3>Table of Contents</h3>
+    <div class="toc-content"></div>
+  </nav>
+  {% endif %}
+
+  <div class="tutorial-content">
+    {{ content }}
+  </div>
+
+  <footer class="tutorial-footer">
+    {% if page.github_repo %}
+      <a href="{{ page.github_repo }}" class="github-link">View Code on GitHub</a>
+    {% endif %}
+    
+    {% if page.tags %}
+    <div class="tags">
+      {% for tag in page.tags %}
+        <a href="/tag/{{ tag }}" class="tag">#{{ tag }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </footer>
+</article>

@@ -1,0 +1,23 @@
+---
+layout: default
+title: Demos
+permalink: /demos/
+---
+
+<h1>Interactive Demos</h1>
+<p>Live examples and interactive demonstrations of various concepts and projects.</p>
+
+<div class="demos-grid">
+  {% for demo in site.demos %}
+    <div class="demo-card">
+      <h2><a href="{{ demo.url }}">{{ demo.title }}</a></h2>
+      <p>{{ demo.description }}</p>
+      <div class="demo-links">
+        <a href="{{ demo.url }}" class="btn">View Demo</a>
+        {% if demo.github_repo %}
+          <a href="{{ demo.github_repo }}" class="btn-secondary">Source Code</a>
+        {% endif %}
+      </div>
+    </div>
+  {% endfor %}
+</div>

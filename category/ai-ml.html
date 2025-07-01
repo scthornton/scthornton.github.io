@@ -1,0 +1,45 @@
+---
+layout: default
+title: "AI & Machine Learning"
+permalink: /category/ai-ml/
+---
+
+<div class="category-page">
+  <header class="category-header">
+    <h1>{{ site.category_descriptions.ai-ml.icon }} {{ site.category_descriptions.ai-ml.name }}</h1>
+    <p class="category-description">{{ site.category_descriptions.ai-ml.description }}</p>
+  </header>
+
+  <div class="content-sections">
+    <!-- Blog Posts -->
+    <section>
+      <h2>Blog Posts</h2>
+      <div class="posts-list">
+        {% for post in site.categories.ai-ml %}
+          <article class="post-item">
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            <time>{{ post.date | date: "%B %d, %Y" }}</time>
+            <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+
+    <!-- Tutorials -->
+    {% assign ml_tutorials = site.tutorials | where_exp: "item", "item.categories contains 'ai-ml'" %}
+    {% if ml_tutorials.size > 0 %}
+    <section>
+      <h2>Tutorials</h2>
+      <div class="tutorial-list">
+        {% for tutorial in ml_tutorials %}
+          <div class="tutorial-item">
+            <h3><a href="{{ tutorial.url }}">{{ tutorial.title }}</a></h3>
+            <span class="difficulty difficulty-{{ tutorial.difficulty }}">{{ tutorial.difficulty }}</span>
+            <p>{{ tutorial.description }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+  </div>
+</div>

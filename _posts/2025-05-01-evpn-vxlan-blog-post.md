@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Building AI-Ready Data Center Networks: My Journey with EVPN-VxLAN on NVIDIA Air"
-date: 2024-11-15
+date: 2025-05-01
 categories: [networking, ai-ml]
 tags: [evpn, vxlan, nvidia, data-center, gpu-networking, bgp, ai-infrastructure, network-overlay]
 excerpt: "As AI workloads push the boundaries of data center networking, I explore how EVPN-VxLAN can meet these demanding requirements through hands-on experience with NVIDIA Air."

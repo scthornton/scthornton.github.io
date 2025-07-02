@@ -13,12 +13,14 @@ linkedin_username: scthornton
 # Build settings
 markdown: kramdown
 highlighter: rouge
-theme: architect
+remote_theme: pages-themes/hacker@v0.2.0
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-paginate
+  - jekyll-remote-theme
+
 
 # Pagination
 paginate: 10

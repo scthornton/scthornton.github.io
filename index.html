@@ -1,70 +1,206 @@
 ---
 layout: default
 ---
+
 <style>
   .hero {
     text-align: center;
     padding: 3rem 0;
+    margin-bottom: 2rem;
   }
+
   .hero h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+
+  .content-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    display: block;
+    background: #fff;
+  }
+
+  .content-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border-color: #0066cc;
+  }
+
+  .content-card h2 {
+    margin-top: 0;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .content-card .icon {
+    font-size: 2rem;
+  }
+
+  .content-card p {
+    margin: 1rem 0 0 0;
+    color: #666;
+  }
+
+  .recent-posts {
+    margin: 4rem 0;
+  }
+
+  .recent-posts h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .post-list {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .post-preview {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .post-preview:last-child {
+    border-bottom: none;
+  }
+
+  .post-preview h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  .post-preview h3 a {
+    color: #333;
+    text-decoration: none;
+  }
+
+  .post-preview h3 a:hover {
+    color: #0066cc;
+  }
+
+  .post-meta {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+  }
+
+  .post-excerpt {
+    color: #555;
+  }
+
+  .view-all {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .view-all a {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background: #0066cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.2s;
+  }
+
+  .view-all a:hover {
+    background: #0052a3;
   }
 </style>
 
 <div class="home">
   <section class="hero">
     <h1>Welcome!</h1>
+    <p>{{ site.description }}</p>
   </section>
-</div>
 
-  <!-- Quick Links -->
-  <section class="quick-links">
-    <div class="grid">
-      <a href="/tutorials/" class="card">
-        <h3>📚 Tutorials</h3>
-        <p>Step-by-step guides and in-depth explanations</p>
+  <!-- Content Type Grid -->
+  <section class="content-types">
+    <div class="content-grid">
+      <a href="/archive/" class="content-card">
+        <h2><span class="icon">📝</span> Blog Posts</h2>
+        <p>Technical insights, project updates, and lessons learned from my journey in AI, security, and networking</p>
       </a>
-      <a href="/cheatsheets/" class="card">
-        <h3>📋 Cheatsheets</h3>
-        <p>Quick reference guides and commands</p>
+
+      <a href="/tutorials/" class="content-card">
+        <h2><span class="icon">📚</span> Tutorials</h2>
+        <p>Step-by-step guides and in-depth explanations on complex technical topics</p>
       </a>
-      <a href="/demos/" class="card">
-        <h3>🚀 Demos</h3>
-        <p>Live examples and interactive projects</p>
+
+      <a href="/cheatsheets/" class="content-card">
+        <h2><span class="icon">📋</span> Cheatsheets</h2>
+        <p>Quick reference guides, configurations, and handy commands for various tools</p>
+      </a>
+
+      <a href="/demos/" class="content-card">
+        <h2><span class="icon">🚀</span> Demos</h2>
+        <p>Live examples and interactive demonstrations of concepts and projects</p>
       </a>
     </div>
   </section>
 
-  <!-- Recent Posts -->
+  <!-- Recent Posts Section -->
   <section class="recent-posts">
-    <h2>Recent Posts</h2>
-    {% for post in site.posts limit:5 %}
+    <h2>Recent Blog Posts</h2>
+    <div class="post-list">
+      {% for post in site.posts limit:5 %}
       <article class="post-preview">
         <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
         <div class="post-meta">
           <time>{{ post.date | date: "%B %d, %Y" }}</time>
+          {% if post.categories %}
+          |
           {% for cat in post.categories %}
-            <a href="/category/{{ cat }}" class="category-tag">{{ site.category_descriptions[cat].icon }} {{ cat }}</a>
+          <span class="category">{{ cat }}</span>{% unless forloop.last %}, {% endunless %}
           {% endfor %}
+          {% endif %}
         </div>
-        <p>{{ post.excerpt | strip_html | truncate: 200 }}</p>
+        <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
       </article>
-    {% endfor %}
-    <a href="/archive/" class="view-all">View all posts →</a>
+      {% endfor %}
+    </div>
+
+    <div class="view-all">
+      <a href="/archive/">View All Posts →</a>
+    </div>
   </section>
 
-  <!-- Featured Tutorials -->
-  <section class="featured-tutorials">
-    <h2>Popular Tutorials</h2>
-    <div class="tutorial-grid">
-      {% assign featured_tutorials = site.tutorials | where: "featured", true | limit: 3 %}
+  <!-- Optional: Featured Content -->
+  {% assign featured_tutorials = site.tutorials | where: "featured", true | limit: 3 %}
+  {% if featured_tutorials.size > 0 %}
+  <section class="featured-content">
+    <h2>Featured Tutorials</h2>
+    <div class="content-grid">
       {% for tutorial in featured_tutorials %}
-        <div class="tutorial-card">
-          <h3><a href="{{ tutorial.url }}">{{ tutorial.title }}</a></h3>
-          <p>{{ tutorial.description }}</p>
-          <span class="difficulty difficulty-{{ tutorial.difficulty }}">{{ tutorial.difficulty }}</span>
-        </div>
+      <a href="{{ tutorial.url }}" class="content-card">
+        <h3>{{ tutorial.title }}</h3>
+        <p>{{ tutorial.description }}</p>
+      </a>
       {% endfor %}
     </div>
   </section>
+  {% endif %}
 </div>

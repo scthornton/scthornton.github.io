@@ -4,14 +4,66 @@ title: Cheatsheets
 permalink: /cheatsheets/
 ---
 
-<h1>Cheatsheets</h1>
-<p>Quick reference guides and command collections for various technologies.</p>
+<style>
+  .cheatsheet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
 
-<div class="cheatsheets-grid">
+  .cheatsheet-card {
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .cheatsheet-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .cheatsheet-card h3 {
+    margin-top: 0;
+    color: #0066cc;
+  }
+
+  .cheatsheet-meta {
+    color: #666;
+    font-size: 0.9em;
+  }
+</style>
+
+<h1>Cheatsheets & Quick References</h1>
+<p>A collection of quick reference guides, configurations, and useful notes.</p>
+
+<div class="cheatsheet-grid">
   {% for sheet in site.cheatsheets %}
   <a href="{{ sheet.url }}" class="cheatsheet-card">
     <h3>{{ sheet.title }}</h3>
+    {% if sheet.description %}
     <p>{{ sheet.description }}</p>
+    {% endif %}
+    <p class="cheatsheet-meta">
+      {% if sheet.date %}
+      Updated: {{ sheet.date | date: "%B %d, %Y" }}
+      {% endif %}
+    </p>
   </a>
   {% endfor %}
 </div>
+
+<hr style="margin: 3rem 0;">
+
+<h2>All Cheatsheets:</h2>
+<ul>
+  {% for sheet in site.cheatsheets %}
+  <li>
+    <a href="{{ sheet.url }}">{{ sheet.title }}</a> - {{ sheet.description }}
+  </li>
+  {% endfor %}
+</ul>

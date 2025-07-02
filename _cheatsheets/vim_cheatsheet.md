@@ -2,7 +2,7 @@
 layout: cheatsheet
 title: "VIM Cheatsheet"
 description: "VIM Notes"
-date: 2025-01-25
+date: 2025-03-20
 categories: [tools, productivity]  
 tags: [linux, vim, vi, nano, text-editor]
 ---

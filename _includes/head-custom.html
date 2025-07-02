@@ -1,0 +1,14 @@
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Find and update the View on GitHub button
+        var githubLinks = document.querySelectorAll('a');
+        githubLinks.forEach(function (link) {
+            if (link.href && link.href.includes('github.com/scthornton/scthornton.github.io')) {
+                link.href = 'https://github.com/scthornton';
+                if (link.textContent.includes('View on GitHub')) {
+                    link.textContent = 'View my GitHub';
+                }
+            }
+        });
+    });
+</script>

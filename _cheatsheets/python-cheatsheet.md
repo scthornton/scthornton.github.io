@@ -2,7 +2,7 @@
 layout: cheatsheet
 title: "Python Cheatsheet"
 description: "Comprehensive Python Notes"
-date: 2025-01-25
+date: 2025-01-05
 categories: [ai-ml, python]
 tags: [scikit-learn, tensorflow, pytorch, pandas, numpy]
 ---

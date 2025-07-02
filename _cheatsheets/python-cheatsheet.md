@@ -4,7 +4,7 @@ title: "Python Cheatsheet"
 description: "Comprehensive Python Notes"
 date: 2025-01-25
 categories: [ai-ml, python]
-tags: [scikit-learn, tensorflow, pytorch, pandas, numpy]
+tags: [python, programming, ai, ml, genai, development]
 ---
 
 # Python Comprehensive Cheatsheet

@@ -1,9 +1,7 @@
 # Site settings
 title: From the desk of Scott Thornton
 email: 
-description: >-
-  Deep dives into AI/ML, Security, Networking, and Programming. 
-  Tutorials, demos, and practical insights from hands-on experience.
+description: 
 baseurl: ""
 url: "https://github.com/scthornton"
 author: Scott Thornton

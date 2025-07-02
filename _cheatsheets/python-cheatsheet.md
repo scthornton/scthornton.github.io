@@ -1,28 +1,45 @@
+---
+layout: cheatsheet
+title: "Python Cheatsheet"
+description: "Comprehensive Python Notes"
+date: 2025-01-25
+categories: [ai-ml, python]
+tags: [scikit-learn, tensorflow, pytorch, pandas, numpy]
+---
+
 # Python Comprehensive Cheatsheet
 
 ## Table of Contents
-1. [Basic Syntax](#basic-syntax)
-2. [Data Types](#data-types)
-3. [Variables and Type Conversion](#variables-and-type-conversion)
-4. [Operators](#operators)
-5. [Control Flow](#control-flow)
-6. [Functions](#functions)
-7. [Data Structures](#data-structures)
-8. [String Operations](#string-operations)
-9. [List Operations](#list-operations)
-10. [Dictionary Operations](#dictionary-operations)
-11. [Set Operations](#set-operations)
-12. [File Operations](#file-operations)
-13. [Exception Handling](#exception-handling)
-14. [Classes and OOP](#classes-and-oop)
-15. [Modules and Packages](#modules-and-packages)
-16. [List Comprehensions](#list-comprehensions)
-17. [Lambda Functions](#lambda-functions)
-18. [Decorators](#decorators)
-19. [Generators](#generators)
-20. [Regular Expressions](#regular-expressions)
-21. [Common Built-in Functions](#common-built-in-functions)
-22. [Useful Standard Library Modules](#useful-standard-library-modules)
+- [Python Comprehensive Cheatsheet](#python-comprehensive-cheatsheet)
+  - [Table of Contents](#table-of-contents)
+  - [Basic Syntax](#basic-syntax)
+  - [Data Types](#data-types)
+  - [Variables and Type Conversion](#variables-and-type-conversion)
+  - [Operators](#operators)
+  - [Control Flow](#control-flow)
+  - [Functions](#functions)
+  - [Data Structures](#data-structures)
+    - [Lists](#lists)
+    - [Tuples](#tuples)
+    - [Dictionaries](#dictionaries)
+    - [Sets](#sets)
+  - [String Operations](#string-operations)
+  - [List Operations](#list-operations)
+  - [Dictionary Operations](#dictionary-operations)
+  - [Set Operations](#set-operations)
+  - [File Operations](#file-operations)
+  - [Exception Handling](#exception-handling)
+  - [Classes and OOP](#classes-and-oop)
+  - [Modules and Packages](#modules-and-packages)
+  - [List Comprehensions](#list-comprehensions)
+  - [Lambda Functions](#lambda-functions)
+  - [Decorators](#decorators)
+  - [Generators](#generators)
+  - [Regular Expressions](#regular-expressions)
+  - [Common Built-in Functions](#common-built-in-functions)
+  - [Useful Standard Library Modules](#useful-standard-library-modules)
+  - [Tips and Best Practices](#tips-and-best-practices)
+  - [Common Gotchas](#common-gotchas)
 
 ## Basic Syntax
 

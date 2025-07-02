@@ -9,9 +9,9 @@ permalink: /cheatsheets/
 
 <div class="cheatsheets-grid">
   {% for sheet in site.cheatsheets %}
-    <a href="{{ sheet.url }}" class="cheatsheet-card">
-      <h3>{{ sheet.title }}</h3>
-      <p>{{ sheet.description }}</p>
-    </a>
+  <a href="{{ sheet.url }}" class="cheatsheet-card">
+    <h3>{{ sheet.title }}</h3>
+    <p>{{ sheet.description }}</p>
+  </a>
   {% endfor %}
 </div>

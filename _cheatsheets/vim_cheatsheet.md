@@ -1,3 +1,12 @@
+---
+layout: cheatsheet
+title: "VIM Cheatsheet"
+description: "VIM Notes"
+date: 2025-01-25
+categories: [ai-ml, python]
+tags: [linux, vim, vi, nano, text-editor]
+---
+
 # Vim Cheat Sheet
 
 > A comprehensive reference for vim commands, organized by skill level and use case.

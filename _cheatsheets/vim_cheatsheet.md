@@ -3,7 +3,7 @@ layout: cheatsheet
 title: "VIM Cheatsheet"
 description: "VIM Notes"
 date: 2025-01-25
-categories: [ai-ml, python]
+categories: [tools, productivity]  
 tags: [linux, vim, vi, nano, text-editor]
 ---
 

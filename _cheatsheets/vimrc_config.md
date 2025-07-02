@@ -1,13 +1,5 @@
 ---
 layout: cheatsheet
-title: "vimrc"
-description: "My vimrc setup"
-date: 2025-01-25
-categories: [ai-ml, python]
-tags: [vimrc, vim, linux, setup]
----
----
-layout: cheatsheet
 title: "My Vim Configuration"
 description: "A comprehensive vimrc setup for enhanced productivity"
 date: 2025-01-25

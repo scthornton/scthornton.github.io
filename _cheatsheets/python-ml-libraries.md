@@ -2,7 +2,7 @@
 layout: cheatsheet
 title: "Python ML Libraries Quick Reference"
 description: "Essential commands and snippets for popular ML libraries"
-date: 2025-01-25
+date: 2025-04-20
 categories: [ai-ml, python]
 tags: [scikit-learn, tensorflow, pytorch, pandas, numpy]
 ---

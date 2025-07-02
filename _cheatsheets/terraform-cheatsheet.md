@@ -2,7 +2,7 @@
 layout: cheatsheet
 title: "Terraform Cheatsheet"
 description: "Terraform Notes"
-date: 2025-01-25
+date: 2025-06-25
 categories: [tools, productivity]  
 tags: [IaC, TF, terraform, automation]
 ---

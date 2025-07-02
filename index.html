@@ -29,30 +29,33 @@ layout: default
   }
 
   .content-card {
-    border: 1px solid #ddd;
+    border: 1px solid #444;
     border-radius: 8px;
     padding: 2rem;
     text-align: center;
     text-decoration: none;
-    color: inherit;
-    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    color: #e0e0e0;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s, background 0.2s;
     display: block;
-    background: #fff;
+    background: rgba(40, 40, 40, 0.8);
+    backdrop-filter: blur(10px);
   }
 
   .content-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    border-color: #0066cc;
+    box-shadow: 0 6px 20px rgba(0, 255, 0, 0.2);
+    border-color: #00ff00;
+    background: rgba(50, 50, 50, 0.9);
   }
 
   .content-card h2 {
     margin-top: 0;
-    color: #333;
+    color: #00ff00;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
   }
 
   .content-card .icon {
@@ -61,7 +64,7 @@ layout: default
 
   .content-card p {
     margin: 1rem 0 0 0;
-    color: #666;
+    color: #b0b0b0;
   }
 
   .recent-posts {
@@ -71,6 +74,8 @@ layout: default
   .recent-posts h2 {
     text-align: center;
     margin-bottom: 2rem;
+    color: #00ff00;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
   }
 
   .post-list {
@@ -81,7 +86,7 @@ layout: default
   .post-preview {
     margin-bottom: 2rem;
     padding-bottom: 2rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #444;
   }
 
   .post-preview:last-child {
@@ -93,22 +98,25 @@ layout: default
   }
 
   .post-preview h3 a {
-    color: #333;
+    color: #00ff00;
     text-decoration: none;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
   }
 
   .post-preview h3 a:hover {
-    color: #0066cc;
+    color: #33ff33;
+    text-decoration: underline;
   }
 
   .post-meta {
     font-size: 0.9rem;
-    color: #666;
+    color: #888;
     margin-bottom: 0.5rem;
   }
 
   .post-excerpt {
-    color: #555;
+    color: #ccc;
   }
 
   .view-all {
@@ -119,15 +127,74 @@ layout: default
   .view-all a {
     display: inline-block;
     padding: 0.75rem 2rem;
-    background: #0066cc;
-    color: white;
+    background: rgba(0, 255, 0, 0.2);
+    color: #00ff00;
     text-decoration: none;
+    border: 1px solid #00ff00;
     border-radius: 5px;
-    transition: background 0.2s;
+    transition: all 0.3s;
+    font-weight: bold;
   }
 
   .view-all a:hover {
-    background: #0052a3;
+    background: rgba(0, 255, 0, 0.3);
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+  }
+
+  /* About Me Section */
+  .about-section {
+    margin: 4rem 0;
+    text-align: center;
+  }
+
+  .about-box {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(40, 40, 40, 0.8);
+    border: 1px solid #444;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+  }
+
+  .about-box h2 {
+    color: #00ff00;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    margin-bottom: 1rem;
+  }
+
+  .about-content {
+    color: #ccc;
+    line-height: 1.8;
+    text-align: left;
+  }
+
+  .about-links {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .about-links a {
+    padding: 0.5rem 1rem;
+    background: rgba(0, 255, 0, 0.2);
+    color: #00ff00;
+    text-decoration: none;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    transition: all 0.3s;
+  }
+
+  .about-links a:hover {
+    background: rgba(0, 255, 0, 0.3);
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  }
+
+  .category {
+    color: #888;
+    font-style: italic;
   }
 </style>
 
@@ -159,6 +226,32 @@ layout: default
         <h2><span class="icon">🚀</span> Demos</h2>
         <p>Live examples and interactive demonstrations of concepts and projects</p>
       </a>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section class="about-section">
+    <div class="about-box">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <p>I'm Scott Thornton, a technology veteran with 25+ years of experience across networking, security, cloud
+          infrastructure, and AI. My expertise spans from designing resilient network infrastructures to implementing
+          advanced security frameworks and developing cutting-edge AI solutions.</p>
+
+        <p>Currently focused on:</p>
+        <ul style="text-align: left; display: inline-block;">
+          <li>Designing enterprise-grade agentic AI systems with RAG capabilities</li>
+          <li>Implementing zero trust security architectures</li>
+          <li>Optimizing large-scale infrastructure for AI/ML workloads</li>
+          <li>Building AI-ready data center networks</li>
+        </ul>
+      </div>
+      <div class="about-links">
+        <a href="/about/">Full Bio</a>
+        <a href="https://linkedin.com/in/{{ site.linkedin_username }}">LinkedIn</a>
+        <a href="https://github.com/{{ site.github_username }}">GitHub</a>
+        <a href="mailto:{{ site.email }}">Contact</a>
+      </div>
     </div>
   </section>
 

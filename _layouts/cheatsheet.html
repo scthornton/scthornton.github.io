@@ -1,0 +1,252 @@
+---
+layout: default
+---
+
+<article class="cheatsheet">
+  <header class="cheatsheet-header">
+    <h1 class="cheatsheet-title">{{ page.title }}</h1>
+    {% if page.description %}
+      <p class="cheatsheet-description">{{ page.description }}</p>
+    {% endif %}
+    <div class="cheatsheet-meta">
+      {% if page.date %}
+        <span>Last updated: {{ page.date | date: "%B %d, %Y" }}</span>
+      {% endif %}
+      {% if page.categories %}
+        | Categories: 
+        {% for category in page.categories %}
+          <span class="category">{{ category }}</span>{% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="cheatsheet-content">
+    {{ content }}
+  </div>
+
+  <footer class="cheatsheet-footer">
+    {% if page.tags %}
+      <div class="cheatsheet-tags">
+        <strong>Tags:</strong>
+        {% for tag in page.tags %}
+          <a href="/tag/{{ tag }}" class="tag">#{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  </footer>
+</article>
+
+<style>
+  .cheatsheet {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .cheatsheet-header {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .cheatsheet-title {
+    color: #00ff00;
+    text-shadow: 0 0 10px rgba(0,255,0,0.5);
+    margin-bottom: 0.5rem;
+  }
+
+  .cheatsheet-description {
+    color: #aaa;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .cheatsheet-meta {
+    color: #888;
+    font-size: 0.9rem;
+  }
+
+  /* Cheatsheet content styling */
+  .cheatsheet-content {
+    color: #ccc;
+    line-height: 1.6;
+  }
+
+  .cheatsheet-content h2 {
+    color: #00ff00;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 5px rgba(0,255,0,0.3);
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.5rem;
+  }
+
+  .cheatsheet-content h3 {
+    color: #00ff00;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .cheatsheet-content h4 {
+    color: #00ff00;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .cheatsheet-content p {
+    margin-bottom: 1rem;
+  }
+
+  .cheatsheet-content ul, .cheatsheet-content ol {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+  }
+
+  .cheatsheet-content li {
+    margin-bottom: 0.3rem;
+  }
+
+  /* Code styling - crucial for cheatsheets */
+  .cheatsheet-content code {
+    background: rgba(0, 255, 0, 0.1);
+    color: #00ff00;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: 'Courier New', Consolas, monospace;
+    font-size: 0.9em;
+  }
+
+  .cheatsheet-content pre {
+    background: #0a0a0a;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    padding: 1rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    box-shadow: 0 0 10px rgba(0,255,0,0.1);
+  }
+
+  .cheatsheet-content pre code {
+    background: none;
+    padding: 0;
+    color: #ccc;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  /* Syntax highlighting for different languages */
+  .cheatsheet-content .language-bash code,
+  .cheatsheet-content .language-shell code {
+    color: #4fc1ff;
+  }
+
+  .cheatsheet-content .language-python code {
+    color: #ffd43b;
+  }
+
+  .cheatsheet-content .language-vim code {
+    color: #84ff84;
+  }
+
+  /* Table styling for command references */
+  .cheatsheet-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  .cheatsheet-content th,
+  .cheatsheet-content td {
+    border: 1px solid #444;
+    padding: 0.75rem;
+    text-align: left;
+  }
+
+  .cheatsheet-content th {
+    background: rgba(0, 255, 0, 0.2);
+    color: #00ff00;
+    font-weight: bold;
+  }
+
+  .cheatsheet-content td code {
+    background: rgba(0, 255, 0, 0.05);
+  }
+
+  .cheatsheet-content blockquote {
+    border-left: 4px solid #00ff00;
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    color: #888;
+    font-style: italic;
+    background: rgba(0, 255, 0, 0.05);
+  }
+
+  .cheatsheet-content a {
+    color: #00ff00;
+    text-decoration: underline;
+  }
+
+  .cheatsheet-content a:hover {
+    color: #33ff33;
+    text-shadow: 0 0 5px rgba(0,255,0,0.5);
+  }
+
+  .cheatsheet-content hr {
+    border: none;
+    border-top: 1px solid #444;
+    margin: 2rem 0;
+  }
+
+  .cheatsheet-content strong {
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .cheatsheet-content em {
+    color: #ccc;
+    font-style: italic;
+  }
+
+  /* Special styling for keyboard shortcuts */
+  .cheatsheet-content kbd {
+    background: #1a1a1a;
+    border: 1px solid #444;
+    border-radius: 3px;
+    color: #00ff00;
+    padding: 0.2rem 0.4rem;
+    font-family: monospace;
+    font-size: 0.9em;
+    box-shadow: 0 2px 0 #000;
+  }
+
+  .cheatsheet-footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #444;
+  }
+
+  .cheatsheet-tags {
+    color: #888;
+  }
+
+  .tag {
+    color: #00ff00;
+    text-decoration: none;
+    margin-right: 0.5rem;
+  }
+
+  .tag:hover {
+    text-decoration: underline;
+  }
+  
+  /* Quick copy button for code blocks (optional) */
+  .cheatsheet-content pre {
+    position: relative;
+  }
+  
+  /* Make inline code in lists more visible */
+  .cheatsheet-content li code {
+    font-weight: bold;
+  }
+</style>

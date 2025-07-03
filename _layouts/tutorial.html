@@ -1,0 +1,249 @@
+---
+layout: default
+---
+
+<article class="tutorial">
+  <header class="tutorial-header">
+    <h1 class="tutorial-title">{{ page.title }}</h1>
+    {% if page.description %}
+      <p class="tutorial-description">{{ page.description }}</p>
+    {% endif %}
+    
+    <div class="tutorial-meta">
+      {% if page.difficulty %}
+        <span class="difficulty difficulty-{{ page.difficulty }}">
+          Difficulty: {{ page.difficulty | capitalize }}
+        </span>
+      {% endif %}
+      {% if page.date %}
+        <span>Updated: {{ page.date | date: "%B %d, %Y" }}</span>
+      {% endif %}
+      {% if page.reading_time %}
+        <span>Reading time: ~{{ page.reading_time }} minutes</span>
+      {% endif %}
+    </div>
+    
+    {% if page.prerequisites %}
+    <div class="prerequisites">
+      <h3>Prerequisites</h3>
+      <ul>
+        {% for prereq in page.prerequisites %}
+          <li>{{ prereq }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </header>
+
+  {% if page.toc %}
+  <nav class="toc">
+    <h3>Table of Contents</h3>
+    <div id="toc-content"></div>
+  </nav>
+  {% endif %}
+
+  <div class="tutorial-content">
+    {{ content }}
+  </div>
+
+  <footer class="tutorial-footer">
+    {% if page.github_repo %}
+      <div class="tutorial-links">
+        <a href="{{ page.github_repo }}" class="github-link">
+          <span>📁</span> View Code on GitHub
+        </a>
+      </div>
+    {% endif %}
+    
+    {% if page.tags %}
+      <div class="tutorial-tags">
+        <strong>Tags:</strong>
+        {% for tag in page.tags %}
+          <a href="/tag/{{ tag }}" class="tag">#{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+      </div>
+    {% endif %}
+    
+    {% if page.series %}
+      <div class="series-nav">
+        <h3>Part of the {{ page.series }} series</h3>
+        <!-- Add series navigation here -->
+      </div>
+    {% endif %}
+  </footer>
+</article>
+
+<style>
+  .tutorial {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .tutorial-header {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .tutorial-title {
+    color: #00ff00;
+    text-shadow: 0 0 10px rgba(0,255,0,0.5);
+    margin-bottom: 0.5rem;
+  }
+
+  .tutorial-description {
+    color: #aaa;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .tutorial-meta {
+    color: #888;
+    font-size: 0.9rem;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Difficulty badges */
+  .difficulty {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-weight: bold;
+  }
+
+  .difficulty-beginner {
+    background: rgba(0, 255, 0, 0.2);
+    color: #00ff00;
+    border: 1px solid #00ff00;
+  }
+
+  .difficulty-intermediate {
+    background: rgba(255, 255, 0, 0.2);
+    color: #ffff00;
+    border: 1px solid #ffff00;
+  }
+
+  .difficulty-advanced {
+    background: rgba(255, 0, 0, 0.2);
+    color: #ff4444;
+    border: 1px solid #ff4444;
+  }
+
+  /* Prerequisites box */
+  .prerequisites {
+    background: rgba(0, 255, 0, 0.1);
+    border: 1px solid #00ff00;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    max-width: 600px;
+  }
+
+  .prerequisites h3 {
+    color: #00ff00;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .prerequisites ul {
+    margin: 0;
+    padding-left: 1.5rem;
+  }
+
+  .prerequisites li {
+    color: #ccc;
+    margin-bottom: 0.3rem;
+  }
+
+  /* Table of Contents */
+  .toc {
+    background: rgba(40, 40, 40, 0.8);
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 3rem;
+    max-width: 300px;
+  }
+
+  .toc h3 {
+    color: #00ff00;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  .toc ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .toc li {
+    margin-bottom: 0.5rem;
+  }
+
+  .toc a {
+    color: #ccc;
+    text-decoration: none;
+  }
+
+  .toc a:hover {
+    color: #00ff00;
+  }
+
+  /* Tutorial content styling */
+  .tutorial-content {
+    color: #ccc;
+    line-height: 1.8;
+  }
+
+  .tutorial-content h2 {
+    color: #00ff00;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 5px rgba(0,255,0,0.3);
+    border-bottom: 2px solid #444;
+    padding-bottom: 0.5rem;
+  }
+
+  .tutorial-content h3 {
+    color: #00ff00;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .tutorial-content h4 {
+    color: #00ff00;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .tutorial-content p {
+    margin-bottom: 1.2rem;
+  }
+
+  .tutorial-content ul, .tutorial-content ol {
+    margin-bottom: 1.2rem;
+    padding-left: 2rem;
+  }
+
+  .tutorial-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Code blocks - extra important for tutorials */
+  .tutorial-content code {
+    background: rgba(0, 255, 0, 0.1);
+    color: #00ff00;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: 'Courier New', Consolas, monospace;
+    font-size: 0.9em;
+  }
+
+  .tutorial-content pre {
+    background: #0a0a0a;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    pad

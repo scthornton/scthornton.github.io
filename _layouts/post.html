@@ -1,0 +1,212 @@
+---
+layout: default
+---
+
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%B %d, %Y" }}
+      </time>
+      {% if page.author %}
+        by {{ page.author }}
+      {% endif %}
+      {% if page.categories %}
+        | 
+        {% for category in page.categories %}
+          <a href="/category/{{ category }}" class="category-link">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <footer class="post-footer">
+    {% if page.tags %}
+      <div class="post-tags">
+        <strong>Tags:</strong>
+        {% for tag in page.tags %}
+          <a href="/tag/{{ tag }}" class="tag">#{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  </footer>
+</article>
+
+<style>
+  .post {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .post-header {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .post-title {
+    color: #00ff00;
+    text-shadow: 0 0 10px rgba(0,255,0,0.5);
+    margin-bottom: 1rem;
+  }
+
+  .post-meta {
+    color: #888;
+    font-size: 0.9rem;
+  }
+
+  .post-meta a {
+    color: #00ff00;
+    text-decoration: none;
+  }
+
+  .post-meta a:hover {
+    text-decoration: underline;
+  }
+
+  /* Markdown content styling */
+  .post-content {
+    color: #ccc;
+    line-height: 1.8;
+  }
+
+  .post-content h2 {
+    color: #00ff00;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 5px rgba(0,255,0,0.3);
+  }
+
+  .post-content h3 {
+    color: #00ff00;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .post-content h4 {
+    color: #00ff00;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .post-content p {
+    margin-bottom: 1.2rem;
+  }
+
+  .post-content ul, .post-content ol {
+    margin-bottom: 1.2rem;
+    padding-left: 2rem;
+  }
+
+  .post-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  .post-content code {
+    background: rgba(0, 255, 0, 0.1);
+    color: #00ff00;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+  }
+
+  .post-content pre {
+    background: #1a1a1a;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 1rem;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+  }
+
+  .post-content pre code {
+    background: none;
+    padding: 0;
+    color: #ccc;
+  }
+
+  .post-content blockquote {
+    border-left: 4px solid #00ff00;
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    color: #888;
+    font-style: italic;
+  }
+
+  .post-content a {
+    color: #00ff00;
+    text-decoration: underline;
+  }
+
+  .post-content a:hover {
+    color: #33ff33;
+  }
+
+  .post-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem auto;
+    display: block;
+    border: 1px solid #444;
+    border-radius: 5px;
+  }
+
+  .post-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+  }
+
+  .post-content th,
+  .post-content td {
+    border: 1px solid #444;
+    padding: 0.75rem;
+    text-align: left;
+  }
+
+  .post-content th {
+    background: rgba(0, 255, 0, 0.1);
+    color: #00ff00;
+  }
+
+  .post-content hr {
+    border: none;
+    border-top: 1px solid #444;
+    margin: 2rem 0;
+  }
+
+  .post-content strong {
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .post-content em {
+    color: #ccc;
+    font-style: italic;
+  }
+
+  .post-footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #444;
+  }
+
+  .post-tags {
+    color: #888;
+  }
+
+  .tag {
+    color: #00ff00;
+    text-decoration: none;
+    margin-right: 0.5rem;
+  }
+
+  .tag:hover {
+    text-decoration: underline;
+  }
+</style>

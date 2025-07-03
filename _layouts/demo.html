@@ -1,0 +1,453 @@
+---
+layout: default
+---
+
+<article class="demo">
+  <header class="demo-header">
+    <h1 class="demo-title">{{ page.title }}</h1>
+    {% if page.description %}
+      <p class="demo-description">{{ page.description }}</p>
+    {% endif %}
+    
+    <div class="demo-meta">
+      {% if page.date %}
+        <span>Created: {{ page.date | date: "%B %d, %Y" }}</span>
+      {% endif %}
+      {% if page.categories %}
+        | Categories: 
+        {% for category in page.categories %}
+          <span class="category">{{ category }}</span>{% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+      {% endif %}
+    </div>
+    
+    <div class="demo-actions">
+      {% if page.demo_url %}
+        <a href="{{ page.demo_url }}" class="btn-demo" target="_blank">
+          <span>🚀</span> Launch Full Demo
+        </a>
+      {% endif %}
+      {% if page.github_repo %}
+        <a href="{{ page.github_repo }}" class="btn-github" target="_blank">
+          <span>📁</span> View Source Code
+        </a>
+      {% endif %}
+    </div>
+  </header>
+
+  {% if page.demo_embed %}
+  <section class="demo-container">
+    <div class="demo-wrapper">
+      {{ page.demo_embed }}
+    </div>
+  </section>
+  {% elsif page.demo_url %}
+  <section class="demo-container">
+    <div class="demo-wrapper">
+      <iframe src="{{ page.demo_url }}" 
+              width="100%" 
+              height="600" 
+              frameborder="0"
+              title="{{ page.title }} Demo">
+      </iframe>
+    </div>
+  </section>
+  {% endif %}
+
+  <div class="demo-content">
+    {{ content }}
+  </div>
+
+  {% if page.features %}
+  <section class="demo-features">
+    <h2>Key Features</h2>
+    <div class="features-grid">
+      {% for feature in page.features %}
+        <div class="feature-item">
+          <h3>{{ feature.title }}</h3>
+          <p>{{ feature.description }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if page.technologies %}
+  <section class="demo-tech">
+    <h2>Technologies Used</h2>
+    <div class="tech-list">
+      {% for tech in page.technologies %}
+        <span class="tech-badge">{{ tech }}</span>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <footer class="demo-footer">
+    {% if page.instructions %}
+    <div class="demo-instructions">
+      <h3>How to Use This Demo</h3>
+      {{ page.instructions | markdownify }}
+    </div>
+    {% endif %}
+    
+    {% if page.tags %}
+      <div class="demo-tags">
+        <strong>Tags:</strong>
+        {% for tag in page.tags %}
+          <a href="/tag/{{ tag }}" class="tag">#{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  </footer>
+</article>
+
+<style>
+  .demo {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .demo-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .demo-title {
+    color: #00ff00;
+    text-shadow: 0 0 10px rgba(0,255,0,0.5);
+    margin-bottom: 0.5rem;
+  }
+
+  .demo-description {
+    color: #aaa;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .demo-meta {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Action buttons */
+  .demo-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+
+  .btn-demo, .btn-github {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+    font-weight: bold;
+  }
+
+  .btn-demo {
+    background: rgba(0, 255, 0, 0.2);
+    color: #00ff00;
+    border: 2px solid #00ff00;
+  }
+
+  .btn-demo:hover {
+    background: rgba(0, 255, 0, 0.3);
+    box-shadow: 0 0 20px rgba(0,255,0,0.5);
+    transform: translateY(-2px);
+  }
+
+  .btn-github {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ccc;
+    border: 2px solid #666;
+  }
+
+  .btn-github:hover {
+    border-color: #00ff00;
+    color: #00ff00;
+  }
+
+  /* Demo container */
+  .demo-container {
+    margin: 2rem 0;
+    border: 2px solid #00ff00;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0,255,0,0.3);
+  }
+
+  .demo-wrapper {
+    background: #000;
+    padding: 1rem;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .demo-wrapper iframe {
+    background: #fff;
+    border-radius: 4px;
+  }
+
+  /* Demo placeholder */
+  .demo-placeholder {
+    text-align: center;
+    color: #666;
+    padding: 4rem;
+  }
+
+  /* Demo content styling */
+  .demo-content {
+    color: #ccc;
+    line-height: 1.8;
+    margin: 3rem 0;
+  }
+
+  .demo-content h2 {
+    color: #00ff00;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 5px rgba(0,255,0,0.3);
+  }
+
+  .demo-content h3 {
+    color: #00ff00;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .demo-content h4 {
+    color: #00ff00;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .demo-content p {
+    margin-bottom: 1.2rem;
+  }
+
+  .demo-content ul, .demo-content ol {
+    margin-bottom: 1.2rem;
+    padding-left: 2rem;
+  }
+
+  .demo-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  .demo-content code {
+    background: rgba(0, 255, 0, 0.1);
+    color: #00ff00;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: 'Courier New', Consolas, monospace;
+  }
+
+  .demo-content pre {
+    background: #0a0a0a;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 1rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+  }
+
+  .demo-content pre code {
+    background: none;
+    padding: 0;
+    color: #ccc;
+    line-height: 1.6;
+  }
+
+  .demo-content blockquote {
+    border-left: 4px solid #00ff00;
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    color: #888;
+    font-style: italic;
+  }
+
+  .demo-content a {
+    color: #00ff00;
+    text-decoration: underline;
+  }
+
+  .demo-content a:hover {
+    color: #33ff33;
+  }
+
+  .demo-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem auto;
+    display: block;
+    border: 1px solid #444;
+    border-radius: 5px;
+  }
+
+  .demo-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+  }
+
+  .demo-content th,
+  .demo-content td {
+    border: 1px solid #444;
+    padding: 0.75rem;
+    text-align: left;
+  }
+
+  .demo-content th {
+    background: rgba(0, 255, 0, 0.1);
+    color: #00ff00;
+  }
+
+  /* Features section */
+  .demo-features {
+    margin: 3rem 0;
+  }
+
+  .demo-features h2 {
+    color: #00ff00;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px rgba(0,255,0,0.5);
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .feature-item {
+    background: rgba(40, 40, 40, 0.8);
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.3s;
+  }
+
+  .feature-item:hover {
+    border-color: #00ff00;
+    box-shadow: 0 0 10px rgba(0,255,0,0.2);
+  }
+
+  .feature-item h3 {
+    color: #00ff00;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .feature-item p {
+    color: #ccc;
+    margin: 0;
+  }
+
+  /* Technologies section */
+  .demo-tech {
+    margin: 3rem 0;
+    text-align: center;
+  }
+
+  .demo-tech h2 {
+    color: #00ff00;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 10px rgba(0,255,0,0.5);
+  }
+
+  .tech-list {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .tech-badge {
+    background: rgba(0, 255, 0, 0.2);
+    color: #00ff00;
+    padding: 0.5rem 1rem;
+    border: 1px solid #00ff00;
+    border-radius: 20px;
+    font-size: 0.9rem;
+  }
+
+  /* Instructions box */
+  .demo-instructions {
+    background: rgba(0, 255, 0, 0.05);
+    border: 1px solid #00ff00;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .demo-instructions h3 {
+    color: #00ff00;
+    margin-top: 0;
+  }
+
+  .demo-instructions ul, 
+  .demo-instructions ol {
+    margin-bottom: 0;
+  }
+
+  /* Footer */
+  .demo-footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #444;
+  }
+
+  .demo-tags {
+    color: #888;
+    text-align: center;
+  }
+
+  .tag {
+    color: #00ff00;
+    text-decoration: none;
+    margin-right: 0.5rem;
+  }
+
+  .tag:hover {
+    text-decoration: underline;
+  }
+
+  /* Loading animation for demos */
+  @keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+  }
+
+  .demo-loading {
+    color: #00ff00;
+    text-align: center;
+    padding: 3rem;
+    animation: pulse 2s infinite;
+  }
+</style>
+
+<!-- JavaScript for interactive demos -->
+<script>
+// Add any demo-specific JavaScript here
+document.addEventListener('DOMContentLoaded', function() {
+  // Handle iframe loading
+  const iframes = document.querySelectorAll('.demo-wrapper iframe');
+  iframes.forEach(function(iframe) {
+    iframe.addEventListener('load', function() {
+      console.log('Demo loaded successfully');
+    });
+  });
+});
+</script>

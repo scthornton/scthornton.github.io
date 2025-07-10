@@ -260,12 +260,6 @@ As we head towards the future of AI agents, a couple of things are certain:
 - **Greater Tool Access**: Integration with enterprise systems will become deeper
 - **Regulatory Scrutiny**: AI governance needs will intensify
 
-Prisma AIRS positions you to conquer these challenges head-on. The upcoming **Cortex Cloud WAAS integration (May 2025)** will bring enterprise-scale functionality such as:
-
-- Protocol-level validation for all MCP communications
-- Next-generation threat intelligence from Unit 42
-- Predictive security with ML-based threat modeling
-
 ## **Conclusion: Security as an Enabler, Not a Barrier**
 
 It's only when organizations feel secure about their security posture that the transformative promise of AI agents can become a reality. Prisma AIRS not only protects against danger---it enables innovation by providing the security platform necessary for far-reaching AI rollouts.

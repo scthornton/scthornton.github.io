@@ -2,23 +2,23 @@
 
 > **Disclaimer:** The author was employed by Palo Alto Networks at the time of this writing. This content does not constitute official communications from Palo Alto Networks and represents the personal views and analysis of the author posted on their individual website.
 
-As **AI agents** evolve from simple chatbots to sophisticated autonomous systems capable of executing complex workflows, the **Model Context Protocol (MCP)** has emerged as the semi-de facto standard for AI-tool communication. However, with great capability comes great vulnerability. Here, I'm diving into how Palo Alto Networks' **Prisma AIRS** is revolutionizing security for MCP-based AI systems.
+As **AI agents** evolve from simple chatbots to sophisticated autonomous systems capable of executing complex workflows, the **Model Context Protocol (MCP)** has emerged as the semi-de facto standard for AI-tool communication. However, with great capability comes great vulnerability. Today, we're diving deep into how Palo Alto Networks' **Prisma AIRS** is revolutionizing security for MCP-based AI systems.
 
 ## **The MCP Security Challenge: Why Traditional Security Falls Short**
 
-**Model Context Protocol** is a paradigm shifter when it comes to how AI systems invoke external tools and data sources. It deviates from the predictable pattern of requests found with traditional API designs, with a dynamic, context-based tool invocation that can string operations together across diverse systems. It's so flexible and powerful that it introduces **new attack vectors** that traditional security measures simply aren't capable of handling.
+**Model Context Protocol** is a paradigm shifter when it comes to how AI systems invoke external tools and data sources. It deviates from the predictable pattern of requests in traditional API designs, with a dynamic, context-based tool invocation that can string operations together across diverse systems. It is so flexible and so powerful that it introduces **new attack vectors** that traditional security measures simply aren't capable of handling.
 
-![Prisma AIRS MCP Server Architecture]((https://github.com/scthornton/scthornton.github.io/tree/main/assets/images/mcp-post)prisma-airs-architecture.png)
+![Prisma AIRS MCP Server Architecture](../images/mcp-post/prisma-airs-architecture.png)
 
-Envision a typical MCP flow: a user request is sent to an AI agent, who determines that it needs to get to a database, fetch web pages, and operate on files---all within milliseconds. Each call to a tool has possible threats: **prompt injection attacks, data exfiltration, and privilege escalation threats**. 
+Envision a typical MCP flow: a user request is sent to an AI agent, who determines that it needs to get to a database, fetch web pages, and operate on files---all within milliseconds. Each call to a tool has possible perils: **prompt injection attacks, data exfiltration, and privilege escalation threats**. Legacy WAFs and API gateways only see slices of this carefully choreographed behavior, not the forest for the trees.
 
 ## **Enter Prisma AIRS: Purpose-Built Security for the AI Era**
 
-Palo Alto Networks recognized this shortcoming early and created **Prisma AIRS (AI Runtime Security)** exclusively for the unique requirements of AI workloads. The **Prisma AIRS MCP Server**, currently available on PyPi.org https://pypi.org/project/pan-aisecurity/#examples-model-context-protocol is a quantum leap in AI security architecture.
+Palo Alto Networks recognized this shortcoming early and created **Prisma AIRS (AI Runtime Security)** exclusively for the unique requirements of AI workloads. The **Prisma AIRS MCP Server**, currently available in public preview, is a quantum leap in AI security architecture.
 
 ### **Architectural Innovation: The Security Proxy Pattern**
 
-At its core, Prisma AIRS MCP Server includes a smart proxy design that sits between MCP clients (like Claude Desktop, Cursor, or custom AI apps) and the tools they invoke. It's not just another layer of middleware---this is a purpose-built **security fabric** tuned to the semantics of AI communication.
+At its core, Prisma AIRS MCP Server includes a smart proxy design that sits between MCP clients (like Claude Desktop, Cursor, or custom AI apps) and the tools they invoke. It's not yet another layer of middleware---this is a purpose-built **security fabric** tuned to the semantics of AI communication.
 
 ```python
 # Example: Prisma AIRS MCP Server initialization
@@ -50,7 +50,7 @@ Unlike traditional security solutions that operate on static rules, Prisma AIRS 
 - **Data sensitivity**: What type of information is being accessed?
 - **Chained operations**: How does this fit into the broader workflow?
 
-![Contextual Access Control Flow](../images/mcp-post/contextual-access-control.png)
+![Contextual Access Control Flow](/assets/images/mcp-post/contextual-access-control.png)
 
 This multi-dimensional analysis enables detection of sophisticated attacks that would bypass traditional security layers.
 
@@ -60,7 +60,7 @@ This multi-dimensional analysis enables detection of sophisticated attacks that 
 
 Prisma AIRS protects against **29+ distinct types of prompt injection attacks** in 8 languages. The product employs a multi-layered defense strategy:
 
-![Multi-Layer Prompt Injection Defense](../images/mcp-post/prompt-injection-defense.png)
+![Multi-Layer Prompt Injection Defense](/assets/images/mcp-post/prompt-injection-defense.png)
 
 - **Layer 1: Syntactic Analysis**
   The engine performs live parsing of prompts in real-time to identify structural anomalies typical of injection attempts. This includes:
@@ -148,7 +148,7 @@ AI agents executing in production environments must deliver professional, proper
 - **Industry-specific topic filtering** for individualized requirements
 - **Bias detection and prevention** to ensure fair, ethical AI behavior
 
-![Security Comparison: With vs Without AIRS](../images/mcp-post/security-comparison.png)
+![Security Comparison: With vs Without AIRS](/assets/images/mcp-post/security-comparison.png)
 
 ## **Real-World Implementation: Best Practices**
 
@@ -191,7 +191,7 @@ compliance_policy = PolicyEngine.create_policy(
 
 ### **3. Performance Optimization**
 
-Prisma AIRS is designed for minimal latency:
+Prisma AIRS is designed for minimal latency, but proper configuration ensures optimal performance:
 
 - Local caching of frequently accessed policies
 - Asynchronous logging for non-critical events
@@ -260,6 +260,12 @@ As we head towards the future of AI agents, a couple of things are certain:
 - **Greater Tool Access**: Integration with enterprise systems will become deeper
 - **Regulatory Scrutiny**: AI governance needs will intensify
 
+Prisma AIRS positions you to conquer these challenges head-on. The upcoming **Cortex Cloud WAAS integration (May 2025)** will bring enterprise-scale functionality such as:
+
+- Protocol-level validation for all MCP communications
+- Next-generation threat intelligence from Unit 42
+- Predictive security with ML-based threat modeling
+
 ## **Conclusion: Security as an Enabler, Not a Barrier**
 
 It's only when organizations feel secure about their security posture that the transformative promise of AI agents can become a reality. Prisma AIRS not only protects against danger---it enables innovation by providing the security platform necessary for far-reaching AI rollouts.
@@ -267,5 +273,3 @@ It's only when organizations feel secure about their security posture that the t
 For technical professionals evaluating MCP security solutions, the choice is clear: **Prisma AIRS offers the only AI-native, purpose-designed security platform** that understands and protects the nuanced dynamics of agent-based systems. It's not just a matter of preventing breaches---it's a matter of enabling your AI agents to execute at their highest capability while providing enterprise-class security.
 
 Ready to lock in your AI future? The **Prisma AIRS MCP Server is available now in public preview**. Head to [prisma.pan.dev](https://prisma.pan.dev/) to get started, or reach out to your Palo Alto Networks rep for an in-depth technical briefing.
-
-The author was employed by Palo Alto Networks at the time of this writing. This writing is not to be considered official communications from Palo Alto Networks and is posted on the personal site of the author.

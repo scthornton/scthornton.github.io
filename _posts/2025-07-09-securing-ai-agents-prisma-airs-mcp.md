@@ -8,7 +8,7 @@ As **AI agents** evolve from simple chatbots to sophisticated autonomous systems
 
 **Model Context Protocol** is a paradigm shifter when it comes to how AI systems invoke external tools and data sources. It deviates from the predictable pattern of requests in traditional API designs, with a dynamic, context-based tool invocation that can string operations together across diverse systems. It is so flexible and so powerful that it introduces **new attack vectors** that traditional security measures simply aren't capable of handling.
 
-![Prisma AIRS MCP Server Architecture](../images/mcp-post/prisma-airs-architecture.png)
+![Prisma AIRS MCP Server Architecture](/assets/images/mcp-post/prisma-airs-architecture.png)
 
 Envision a typical MCP flow: a user request is sent to an AI agent, who determines that it needs to get to a database, fetch web pages, and operate on files---all within milliseconds. Each call to a tool has possible perils: **prompt injection attacks, data exfiltration, and privilege escalation threats**. Legacy WAFs and API gateways only see slices of this carefully choreographed behavior, not the forest for the trees.
 

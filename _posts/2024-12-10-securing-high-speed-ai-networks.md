@@ -1,112 +1,144 @@
----
-layout: post
-title: "Securing High-Speed AI Networks: RDMA & GPUDirect Security"
-date: 2024-12-10
-categories: [security, ai-ml, networking]
-tags: [ai-security, rdma, gpu-networking, infiniband, dpu, network-security, distributed-training, high-performance-computing, gpudirect]
-excerpt: "In the relentless pursuit of AI performance, we've created networks so fast that traditional security measures simply cannot keep up. Here's how we secure systems where even the speed of light becomes a bottleneck."
----
+# Securing High-Speed AI Networks: RDMA & GPUDirect Security
 
-In the sprawling data centers that power today's artificial intelligence revolution, a silent war rages at the speed of light. Every microsecond counts when training massive language models or handling billions of inference requests. However, in this relentless pursuit of speed, we've created a paradox: the very optimizations that create blazingly fast AI networks open new attack fronts that traditional security measures cannot address.
+## Overview
+
+*Published: December 10, 2024*  
+*Categories: Security, Networking, AI*  
+*Keywords: AI Security, RDMA, GPU Networking, InfiniBand, DPU, Network Security, Distributed Training, High-Performance Computing*
+
+> "As we're attempting to extract more and more capability from the system, what we're discovering is we're designing systems whose performance exceeds even the speed of light. That's how we design systems where even the speed of light becomes the bottleneck."
+
+## Introduction
+
+In the shadow of monolithic server farms driving the next wave of AI proliferation, war at lightspeed is being waged in dimensions unseen and unheard of in terms of conventional warfare. Microseconds dictate the pace in training timetables for language processors and billion-vector query inference. Racing to reduce latency has created a paradox where the same attributes bringing blazing networking performance to AI create fresh attack surfaces that traditional security is unprepared for.
 
 ## The Nanosecond Arms Race
 
-Modern AI workloads operate in a domain where traditional networking concepts break down. When GPUs communicate over high-speed interconnects, exceeding speeds of 900 GB/s, even the time it takes light to travel from one end of a server rack to the other becomes a meaningful bottleneck. Introducing even the most efficient security appliance—with its inevitable packet inspection overhead—is like asking a Formula 1 car to stop at toll booths mid-race.
+The newest AI workloads operate in environments where traditional networking primitives no longer apply. When GPUs communicate over high-speed interconnects exceeding 900 GB/s, even the time it takes light to travel from one end of a server cabinet to the other becomes the predominant bottleneck. Adding even the most efficient security device, with its inescapable packet-inspection overhead, is akin to forcing a Formula 1 racecar to decelerate at toll booths in the middle of a race.
 
-Consider the mathematics of latency at scale. A single inference request to a large language model might pass through dozens of GPUs, with each communication hop adding nanoseconds that quickly add up. During distributed training, collective operations like all-reduce might take 95ms in traditional TCP/IP networks, but RDMA optimization reduces that time to just 2ms. When you're synchronizing gradients millions of times during a training run, those 93ms savings compound into precious days of reduced training time and millions of dollars in computational costs.
+Consider the mathematics of latency at scale. A single end-to-end inference query to a large language model traverses dozens of GPUs, with each communication hop measured in nanoseconds. All-reduce collective operations employed for distributed training cost 95ms with baseline TCP/IP networking and just 2ms when optimized with RDMA. When synchronizing millions of gradients per round, those 93ms savings per round amount to productive training time measured in days and computation cost savings in the millions.
 
 ## The Architecture of Speed
 
-To understand how to secure these networks, we must first understand their architecture. Unlike traditional data centers, where "compute" (processing) and "storage" (where data lives) are separate entities, AI clusters blur this boundary. GPU memory is part of a distributed computational fabric where data and processing intermingle at unprecedented speed.
+To secure these networks, we first must understand how they're composed. Legacy data centers compartmentalized "compute" and "storage." In artificial intelligence clusters, these are consolidated. GPU memory resides in a distributed computing fabric where computation and information movement occur at previously unimaginable speeds.
 
-![Network Stack Comparison: Traditional vs RDMA](/assets/images/network-stack-comparison.png)
-*Figure 1: Traditional network stacks provide multiple security checkpoints, while RDMA bypasses them all for performance*
+```
+Traditional Network Stack          RDMA/GPUDirect Stack
+┌─────────────────────┐           ┌─────────────────────┐
+│   Application       │           │   Application       │
+├─────────────────────┤           ├─────────────────────┤
+│   Socket API        │           │   Verbs API         │
+├─────────────────────┤           ├─────────────────────┤
+│   TCP/IP Stack      │ ◄─────────┤   RDMA Engine       │
+├─────────────────────┤           ├─────────────────────┤
+│   Network Driver    │           │   HCA Driver        │
+├─────────────────────┤           ├─────────────────────┤
+│   Hardware          │           │   Hardware          │
+└─────────────────────┘           └─────────────────────┘
+     Multiple hops                    Direct memory access
+     Security checkpoints            Bypasses OS kernel
+```
 
-Modern AI training clusters exemplify this structure. Inside a single server (node), eight high-end GPUs communicate via proprietary interconnects, essentially forming a single logical GPU with massive parallelism. These servers then connect to each other via InfiniBand or RoCE (RDMA over Converged Ethernet), protocols that bypass the CPU by design, which permit machines to transfer data directly between their memories.
+Recent deep-learning training environments exemplify this architecture. Eight GPUs in one server (node) communicate via proprietary interconnects like NVLink, behaving like one logical GPU with astounding parallelism. Nodes communicate via InfiniBand or RoCE (RDMA over Converged Ethernet)—protocols that bypass the CPU, enabling direct memory-to-memory communication between machines.
 
-The security implications of RDMA are significant. Traditional network security depends on the OS kernel to enforce access controls; RDMA bypasses all of these protections. It allows a GPU in one node to directly read or write memory in another, without involvement from the CPU or OS. As a result, conventional firewalls and intrusion detection systems become effectively blind. While protection domains and memory windows offer some level of isolation, engineers designed these mechanisms for performance, not security.
+The security implications of RDMA run deep. Traditional network security relies on the OS kernel to enforce access controls; RDMA circumvents these mechanisms entirely. RDMA allows one GPU in one node to directly access, read from, or write to the memory of another node without operating system or CPU involvement. Conventional firewalls and intrusion detection systems are rendered largely blind to these activities. Protection domains and memory windows provide some isolation, but these mechanisms were optimized for performance, not security considerations.
 
 ## Evolving Threats in Distributed AI Training
 
-The security challenges in AI networks are far from theoretical. As these systems become the backbone of critical infrastructure, they've evolved into irresistible targets. Of course, the threats they face are just as sophisticated and fast-moving as the networks themselves.
+AI network security threats are far from hypothetical. As these systems become strategic infrastructure pillars, they attract sophisticated attackers employing advanced, high-tech, lightspeed attack methodologies.
 
-![Distributed AI Training Attack Surface](/assets/images/distributed-ai-attack-surface.png)
-*Figure 2: Attack vectors in distributed AI training environments*
+### Attack Surface Analysis
 
-**Model Extraction Attacks**: In inference-serving environments, attacks can reverse-engineer proprietary models simply by sending carefully crafted inference requests and analyzing how the system responds—sometimes down to the microsecond. In high-speed networks, the very optimizations that reduce latency can amplify timing differences, making it easier for attackers to exploit side-channel leaks. What's more, the electrical characteristics of high-speed interconnects can unintentionally leak information through power analysis, exposing details about the computation being performed.
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    Distributed AI Training                  │
+│                       Attack Vectors                        │
+├─────────────────────────────────────────────────────────────┤
+│  Model Extraction    │  Network Manipulation │  Byzantine   │
+│  • Timing attacks    │  • Gradient poisoning │  • Failures  │
+│  • Side channels     │  • MITM attacks       │  • Corruption │
+│  • Power analysis    │  • Traffic analysis   │  • Detection │
+├─────────────────────────────────────────────────────────────┤
+│  Resource Hijacking  │  Memory Attacks       │  Crypto      │
+│  • GPU partitioning  │  • Direct access      │  • Key mgmt  │
+│  • Stealth mining    │  • Buffer overflows   │  • Quantum   │
+└─────────────────────────────────────────────────────────────┘
+```
 
-**Data Poisoning via Network Manipulation**: In distributed training, GPUs constantly exchange gradient updates. A single compromised node in a 1,024-GPU cluster could inject carefully crafted gradients to create backdoors triggered only by specific inputs—all while preserving the model's overall accuracy. Traditional intrusion detection systems, which operate on millisecond timescales, cannot detect anomalies in nanosecond-scale gradient exchanges.
+**Model Extraction Attacks**: In inference-serving configurations, adversaries reverse-engineer proprietary models by submitting benign-looking inference requests and analyzing system responses at the microsecond level. High-speed networking amplifies timing variations, enabling sophisticated side-channel analysis. The electromagnetic properties of high-speed interconnects can leak information about in-flight computations through power analysis.
 
-**Byzantine Failures in Distributed Training**: In large-scale GPU training across thousands of nodes, even random hardware failures can corrupt model updates. As systems scale, distinguishing between legitimate failures and malicious behavior becomes exponentially harder. The challenge increases further when using in-network aggregation, where switches perform reductions on gradient data: if compromised, a single switch could subtly manipulate the training of every model passing through it.
+**Network Manipulation and Poisoning**: During distributed training, GPUs continuously share gradient updates. An attacker compromising a single node in a 1,024-GPU cluster can inject malicious gradients to plant backdoors that respond only to specific inputs—without affecting overall model accuracy. Conventional intrusion detection systems operating at millisecond timescales cannot detect nanosecond-scale anomalies during gradient sharing.
 
-**Resource Hijacking**: The high computational density of AI clusters makes them prime targets for cryptojacking. A single high-end GPU can generate thousands of dollars in cryptocurrency each day. With technologies like Multi-Instance GPU (MIG) that enable GPU partitioning, attackers might compromise just a fraction of a GPU's resources, which is enough to profit while staying below detection thresholds.
+**Byzantine Failures in Distributed Training**: Hardware failures during large-scale GPU training across thousands of machines can corrupt model updates. At scale, distinguishing between legitimate failures and malicious actions becomes exponentially more complex. The problem is magnified with in-network aggregation—a single compromised switch can silently corrupt training for all models passing through it.
 
-## Silicon-Level Security: The New Frontier
+**Resource Hijacking**: The dense computational resources of AI clusters make them prime cryptojacking targets. A high-end GPU can mine thousands of dollars worth of cryptocurrency in a single day. Technologies like Multi-Instance GPU (MIG), which partition GPU resources, enable threat actors to hijack valuable fractions while staying below detection thresholds.
 
-How do we secure microsecond-critical networks? The solution is not to add security, but rather, to embed security directly into the silicon. Modern GPUs and specialized processors increasingly incorporate encryption and authentication at the hardware level, enabling security checks to occur at wire speed.
+## Silicon-Level Security: The Future Frontier
 
-Our key innovation is the integration of security into the data path itself. When a GPU initiates a high-speed transfer, it doesn't send raw data—it delivers encrypted, authenticated packets with hardware-generated signatures. The receiving GPU verifies these signatures in dedicated silicon, operating in parallel to the main data path. This parallelization is crucial: security checks happen simultaneously with data transfer, not as a separate step.
+Securing microsecond-critical networks requires integrating security into silicon rather than layering security on top. Modern GPUs and ASICs incorporate encryption capabilities in hardware to provide wire-speed security verification.
 
-But hardware security alone is not enough. The real challenge lies in managing cryptographic keys and establishing trust across thousands of GPUs. Like a built-in ID check, hardware attestation allows each GPU to prove its identity and integrity before joining the computational fabric. Each GPU maintains a hardware root of trust, which remains secure even if attackers completely compromise the host system.
+The breakthrough is embedding security directly in the data path. When a GPU operates at full speed, it transmits not raw information but encrypted, authenticated packets whose signatures are generated in hardware. The receiving GPU validates those signatures using dedicated silicon running parallel to the main data stream. This parallelism is crucial: security validation occurs during transfer, not as an after-the-fact process.
+
+Hardware security alone is insufficient. The challenge involves managing cryptographic keys and establishing trust among thousands of GPUs. Hardware attestation allows each GPU to authenticate and demonstrate its integrity before participating in collective computation. Each GPU maintains a hardware root of trust that remains secure even if adversaries compromise the host system.
 
 ## In-Network Security for Ultra-Fast AI Infrastructure
 
-The most forward-looking approach to AI network security relies on in-network computing: performing security operations within the network fabric itself. Modern DPUs (Data Processing Units) exemplify this shift. DPUs are full-fledged ARM-based computers positioned at the network edge, capable of running complex security policies without disrupting the main computational workflow.
+The most advanced approach to securing AI networks is in-network computing: executing security operations from within the network infrastructure itself. Data Processing Units (DPUs) exemplify this model—complete ARM-based computers at network edges that execute advanced security policies without impacting main computational traffic.
 
-For example, a DPU can perform real-time anomaly detection on gradient updates during distributed training. By observing patterns across thousands of gradient exchanges, it builds statistical models of normal behavior. When the DPU detects anomalies—perhaps a node sending gradients that diverge significantly from the cluster norm—it can instantly quarantine that node, all without introducing a single microsecond of latency into the critical path.
+A DPU can perform real-time anomaly detection on gradient updates during distributed training. By monitoring thousands of inter-node gradient communications and building statistical models of normal behavior, it identifies anomalies—such as nodes posting gradients far beyond cluster norms—and autonomously isolates malicious nodes without adding even one microsecond of critical-path latency.
 
-This approach becomes even more powerful when it integrates with protocols like SHARP (Scalable Hierarchical Aggregation and Reduction Protocol), which offloads collective operations to the network switches themselves. In-network aggregation can reduce data movement by up to 95%, but it also introduces new security risks. Because these switches effectively control every gradient update flowing through the system, administrators must trust and rigorously verify their identity.
+This approach becomes more powerful with techniques like Scalable Hierarchical Aggregation and Reduction Protocol (SHARP), where collective operations are offloaded to network switches. In-network aggregation reduces data movement by 95% but introduces additional security vulnerabilities. Since switches process all gradient updates flowing through the system, they require robust trust establishment and authentication mechanisms.
 
-## How Timing and Distance Shape AI Network Trust
+## Physics-Based Security: Time and Distance
 
-At microsecond scales, even the speed of light becomes a security factor. In a large AI cluster, GPUs may be separated by up to 100 meters. Light takes approximately 333 nanoseconds to travel that distance, enough time for dozens of encryption operations on modern hardware.
+At microsecond timescales, the speed of light becomes security-relevant. In large-scale AI clusters, GPUs might be separated by 100 meters. Light takes approximately 333 nanoseconds to traverse this distance—sufficient time for dozens of encryption cycles on modern hardware.
 
-This physical constraint enables a powerful new security primitive: distance-bounding protocols. By precisely measuring round-trip times between GPUs, the system can detect man-in-the-middle attacks that would otherwise be invisible to traditional security measures. Any attempt to intercept and relay communications introduces measurable delays—on the level of nanoseconds.
+This physical constraint enables a powerful new security primitive: distance-bounding protocols. By measuring round-trip times between GPUs with nanosecond precision, these protocols detect man-in-the-middle attacks that would otherwise go undetected by conventional security. All intercept-and-relay attacks introduce measurable latency at the nanosecond scale.
 
-Time-triggered Ethernet extends this concept by synchronizing clocks across the entire cluster with nanosecond precision, creating a temporal fabric where every packet has an expected arrival window. Deviations from this schedule—whether due to attack or failure—trigger immediate investigation. When combined with the deterministic latency of InfiniBand networks, the result is a system where even the smallest anomaly becomes immediately observable.
+Time-Sensitive Networking (TSN) extends this concept by synchronizing cluster clocks to nanosecond precision, creating a temporal fabric where every packet arrives within an expected timeframe. Deviations from this schedule—whether due to attacks or failures—trigger immediate investigation. Combined with InfiniBand's deterministic latency, even the smallest anomalies become instantly apparent.
 
 ## GPUDirect and RDMA: Direct Memory Access, Direct Risk
 
-The GPUDirect family of technologies—including direct GPU-to-GPU communication across nodes (RDMA), direct storage access (Storage), and overlapped computation with communication (Async)—offers peak performance, but also introduces a security nightmare. Each bypassed layer removes a potential checkpoint for security validation.
+The GPUDirect technology suite—enabling direct GPU-to-GPU communication (RDMA), direct storage access (Storage), and overlapped communication with computation (Async)—achieves peak performance at the cost of security complexity. Each bypassed layer represents a lost security verification point.
 
-GPUDirect Storage, for instance, allows NVMe drives to write directly to GPU memory. While this eliminates CPU bottlenecks for data loading, it also opens a direct path for a compromised storage device to directly corrupt GPU memory. Securing this path requires rethinking storage security entirely—embedding encryption and integrity checking within storage devices themselves, and allowing GPUs to verify data integrity using dedicated hardware engines.
+GPUDirect Storage permits direct access by NVMe drives to GPU memory. While this prevents CPU bottlenecks during data loading, it also enables compromised storage components to directly corrupt GPU memory. Securing this pathway requires redesigning storage security from the ground up—embedding encryption and integrity checking within storage components and enabling GPUs to validate data integrity using purpose-built hardware engines.
 
-GPUDirect RDMA introduces similar security risks. Although protection domains and memory windows provide some isolation, they're insufficient in the face of sophisticated attacks. More robust implementations now include memory encryption even within the data center, ensuring that even an attacker with physical access to the network cannot read or tamper with in-flight data.
+GPUDirect RDMA presents similar security challenges. Memory windows and protection domains provide some isolation but offer inadequate protection against sophisticated attacks. Secure designs now employ in-datacenter memory encryption to prevent adversaries with network access from reading or modifying in-flight data.
 
-## Orchestrating AI Security at Scale Across Distributed Networks
+## Distributed Security Management at Scale
 
-Securing individual connections is only part of the challenge. The true complexity emerges when orchestrating security policies across thousands of GPUs, potentially distributed across multiple data centers. Modern infrastructure management platforms provide critical abstraction layers, allowing security policies to be defined at a logical level and automatically compiled down to hardware-specific implementations.
+Managing security policies across thousands of GPUs, potentially spanning multiple data centers, represents the other half of the challenge. Current infrastructure management frameworks provide necessary abstraction layers, enabling security policy definition at logical levels that automatically map to hardware-specific implementations.
 
-These platforms also support A/B testing of security policies. By applying different security configurations to subsets of the cluster and measuring their effects on training performance and model accuracy, operators can strike an optimal balance between security and efficient performance. For instance, you might run full encryption on 10% of nodes handling the most sensitive data and apply lighter-weight authentication to the rest.
+These frameworks enable A/B testing of security policies. By experimenting with different security configurations on cluster subsets and measuring impacts on training speed and model accuracy, operators can optimize the balance between security and performance. For example, deploying full encryption on 10% of nodes handling the most sensitive data while using lightweight authentication on remaining nodes.
 
-Unified Fabric Managers for InfiniBand networks now include sophisticated security monitoring capabilities, tracking not just performance metrics but also communication patterns that might indicate compromise. They can detect unusual traffic patterns, like a node initiating connections with unfamiliar peers, and flag them for immediate investigation.
+Modern InfiniBand fabric managers offer sophisticated security monitoring capabilities, tracking not only performance metrics but also communication patterns that signal compromise. Security applications excel at detecting unusual traffic patterns—such as nodes establishing unexpected peer connections—and flagging them for investigation.
 
 ## The Future: Quantum-Safe AI Networks
 
-As we look toward the future, the convergence of AI and quantum computing presents both transformative potential and significant security risks. Quantum computers, when they arrive at scale, will eventually break many of today's widely used encryption schemes. This poses a unique threat to AI networks, which rely on long-lived models and training datasets. Data encrypted today may need to remain secure for decades, making it vulnerable to future quantum attacks.
+The convergence of quantum computing and artificial intelligence brings revolutionary promise alongside existential threats. Sufficiently large quantum computers will eventually compromise many of today's encryption techniques. This poses particular risks for AI systems we build today, since they rely on long-lived models and training datasets. Data encrypted today may need to remain secure for decades, leaving it vulnerable to future quantum attacks.
 
-Research into post-quantum cryptography for AI networks focuses on lattice-based schemes that can be efficiently executed on GPU hardware. The challenge lies in maintaining microsecond-level performance while handling encryption keys that are orders of magnitude larger than those used in traditional cryptography.
+Post-quantum cryptography for AI networks evaluates lattice-based cryptographic schemes executing efficiently on GPU hardware. The objective is achieving microsecond-scale performance with cryptographic keys orders of magnitude larger than traditional cryptography.
 
-One promising direction exploits the massive parallelism of GPUs themselves. By implementing lattice operations as GPU kernels, encryption and decryption can occur in parallel to normal computation without disrupting the data pipeline. Early prototypes show that post-quantum encryption can be achieved with only a 10-15% performance overhead—an acceptable trade-off for many AI workloads where security is paramount.
+The most promising approach leverages GPUs' massive parallelism. By implementing lattice operations as GPU kernels, cryptographic operations run parallel to normal computation without breaking the pipeline. Early prototypes demonstrate post-quantum encryption with only 10-15% performance overhead—an acceptable trade-off for most AI workloads where security is the priority.
 
 ## Multi-Party Computation and Federated Learning
 
-As AI training increasingly spans organizational boundaries, secure multi-party computation (MPC) becomes essential. Federated learning scenarios—where multiple parties jointly train a model without sharing raw data—require novel security approaches that work at network speed and scale.
+As AI training increasingly spans organizational boundaries, secure multi-party computation (MPC) becomes critical. Federated learning applications—where multiple parties collaborate to train models without sharing raw data—urgently need new security solutions operating at network speed and scale.
 
-Modern implementations combine homomorphic encryption with secure aggregation protocols, allowing gradients to be combined without revealing individual contributions. The challenge is implementing these cryptographic protocols efficiently enough to support real-time training. Hardware acceleration in next-generation NICs and DPUs will be crucial for making MPC both practical and performant at scale.
+Current implementations combine secure aggregation techniques with homomorphic encryption to enable gradient aggregation without revealing individual contributions. The challenge is executing these cryptographic operations fast enough for real-time training. Hardware acceleration by next-generation NICs and DPUs will make practical, efficient MPC at scale feasible.
 
-## Conclusion: The Synthesis of Speed and Security
+## Conclusion: Balancing Speed and Security
 
-Securing high-speed AI networks marks a fundamental shift in how we think about computer security. In environments where even a single added router hop can derail a training run, traditional perimeter-based security models are obsolete. Instead, we must weave security into the computational fabric itself—designed into silicon, orchestrated by intelligent software, and anchored in the immutable laws of physics.
+Securing high-speed AI networks represents a paradigm shift in cybersecurity thinking. In environments where adding a single router hop can invalidate a training run, traditional perimeter-based security concepts no longer apply. Instead, we must embed security deep within the computational fabric itself—in silicon, through intelligent software, and leveraging immutable physics principles.
 
-The path forward requires close collaboration between hardware designers, network architects, and security researchers. Recent advances in DPUs, in-network computing, and hardware-based encryption point the way forward. Still, technology alone isn't sufficient. We need new standards, new protocols, and fundamentally new ways of thinking about trust in distributed systems.
+The future demands intensive collaboration between hardware engineers, network architects, and security researchers. Current trends toward DPUs, in-network computing, and hardware-assisted encryption point the way forward. Technology alone, however, will not suffice. New standards, protocols, and trust concepts for distributed systems will be essential.
 
-As AI becomes the foundation of our digital infrastructure, the stakes couldn't be higher. The networks we design today will train the models that make decisions about healthcare, finance, and national security tomorrow. Whether it's InfiniBand running at 800 Gb/s with XDR or Ethernet solutions pushing toward 1.6 Tb/s, the core challenge remains the same: delivering uncompromising security without sacrificing the speed that makes modern AI possible.
+As our technological future becomes increasingly dependent on artificial intelligence, the stakes could not be higher. The networks we deploy today will train algorithms making healthcare, finance, and national security decisions for decades to come. Whether maintaining InfiniBand at 800 Gb/s with XDR or pushing Ethernet to 1.6 Tb/s, the fundamental challenge remains: delivering uncompromising security without sacrificing the speed that drives modern AI.
 
-The race is on. It's measured in microseconds. But with thoughtful engineering, innovative hardware, and a deep understanding of the physics of computation, we can build AI networks that are both blazingly fast and secure. In the end, the best security is the kind you never notice—because, like the data it protects, it moves at the speed of light.
+The race has begun. The timeframe is measured in microseconds. Through careful engineering, innovative hardware, and deep understanding of computational physics, we can design AI networks that are both lightning-fast and completely secure. Ultimate security is the kind you never notice—the kind that, like the message it protects, travels at the speed of light.
 
 ---
 
-**About the Author**: Scott Thornton is a technology veteran with 25+ years of experience across networking, security, cloud infrastructure, and AI. Currently focused on designing enterprise-grade agentic AI systems and implementing zero-trust architectures, Scott brings deep expertise in building resilient infrastructures that support modern AI workloads. His recent work involves optimizing large-scale networks for AI/ML applications while maintaining robust security frameworks.
+**About the Author**: Scott Thornton brings over 25 years of experience in networking, security, cloud infrastructure, and artificial intelligence. With expertise in creating enterprise-grade zero-trust AI solutions and zero-trust architectures, Scott focuses on building resilient infrastructures to support next-generation AI workloads. His current research interests lie in optimizing AI and machine learning workloads on large-scale networks using advanced security frameworks.
 
-**Connect with me**: [LinkedIn](https://www.linkedin.com/in/scthornton/) | [GitHub](https://github.com/scthornton)
+**Connect**: [LinkedIn](https://linkedin.com/in/scthornton)

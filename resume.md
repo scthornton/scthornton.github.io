@@ -1,3 +1,9 @@
+---
+layout: default
+title: Scott Thornton - Master Resume Database
+permalink: /resume/
+---
+
 # SCOTT THORNTON - MASTER RESUME DATABASE
 ## Comprehensive Career Chronicle (1998-2025)
 
@@ -400,14 +406,6 @@ Western Illinois University & University of Iowa
 - **SEC504: Hacker Tools, Techniques, and Incident Handling** - GIAC Certified Incident Handler Certification (GCIH)
 - **SEC488: Cloud Security Essentials** - GIAC Cloud Security Essentials (GCLD)
 - **SEC401: Security Essentials - Network, Endpoint, and Cloud Essentials** - GIAC Security Essentials (GSEC)
-
-**NVIDIA Academy Certifications:**
-- **AI Infrastructure and Operations Fundamentals** (June 2025)
-- **The Fundamentals of RDMA Programming** (June 2025)
-- **InfiniBand Network Administration** (June 2025)
-- **InfiniBand Essentials** (June 2025)
-- **Introduction to Networking** (June 2025)
-- **AI for All: From Basics to GenAI Practice** (August 2025)
 
 ---
 

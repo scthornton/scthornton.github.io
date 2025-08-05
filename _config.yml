@@ -56,7 +56,19 @@ category_descriptions:
     name: "Programming"
     description: "Python, Terraform, useful scripts, programs, projects, and best practices"
     icon: "🐍"
-
+    
+# Navigation
+navigation:
+  main:
+    - title: "Home"
+      url: /
+    - title: "Resume"
+      url: /resume/
+    - title: "About"  
+      url: /about/
+    - title: "Posts"
+      url: /posts/
+      
 # Defaults
 defaults:
   - scope:

@@ -1,9 +1,3 @@
----
-layout: default
-title: Scott Thornton - Master Resume Database
-permalink: /resume/
----
-
 # SCOTT THORNTON - MASTER RESUME DATABASE
 ## Comprehensive Career Chronicle (1998-2025)
 
@@ -407,6 +401,14 @@ Western Illinois University & University of Iowa
 - **SEC488: Cloud Security Essentials** - GIAC Cloud Security Essentials (GCLD)
 - **SEC401: Security Essentials - Network, Endpoint, and Cloud Essentials** - GIAC Security Essentials (GSEC)
 
+**NVIDIA Academy Certifications:**
+- **AI Infrastructure and Operations Fundamentals** (June 2025)
+- **The Fundamentals of RDMA Programming** (June 2025)
+- **InfiniBand Network Administration** (June 2025)
+- **InfiniBand Essentials** (June 2025)
+- **Introduction to Networking** (June 2025)
+- **AI for All: From Basics to GenAI Practice** (August 2025)
+
 ---
 
 ## AWARDS & INDUSTRY RECOGNITION
@@ -422,6 +424,14 @@ Western Illinois University & University of Iowa
 ---
 
 ## PROFESSIONAL RECOMMENDATIONS
+
+**Scott Clark, CXO | Former Division CTO, Brocade Communications**  
+*"Scott is an exceptional enterprise security architect who combines deep technical expertise with outstanding strategic vision. His ability to design secure, scalable solutions while ensuring compliance with rigorous standards makes him invaluable for enterprise security transformations."*
+
+**Patrick Glynn, Consulting Engineering Manager, Wiz**  
+*"Scott's collaborative approach and ability to influence multiple stakeholders while maintaining technical excellence makes him ideal for enterprise security architecture roles. His proven track record in compliance and risk management gives him the foundation to handle the most complex security challenges."*
+
+**Complete LinkedIn Recommendations:**
 
 **Scott Clark, ALM - CXO | GTM Advisor & Producer | AI Readiness Author**  
 *"I had the pleasure of working with Scott Thornton at Vyatta, Brocade Communications, where he reported to me as a Distinguished Systems Engineer and Leader while I served as Division CTO of the Software Networking Group. Scott is an exceptional technologist with a rare combination of deep technical expertise and a strong understanding of real-world customer challenges. What sets Scott apart is his ability to connect the dots across functions—engaging product management, engineering, sales, and customer teams with clarity and purpose. He consistently created win-win outcomes by aligning technical possibilities with business needs. His collaborative approach, communication skills, and strategic thinking made him a trusted advisor internally and externally. I highly recommend Scott for any leadership role that combines technology, customer success, and innovation."*

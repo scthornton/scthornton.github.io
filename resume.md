@@ -4,6 +4,13 @@ title: Scott Thornton - Master Resume Database
 permalink: /resume/
 ---
 
+
+
+
+
+
+
+
 # SCOTT THORNTON - MASTER RESUME DATABASE
 ## Comprehensive Career Chronicle (1998-2025)
 
@@ -34,219 +41,137 @@ Seasoned security architect and engineering leader with a passion for translatin
 
 ---
 
-## PROFESSIONAL EXPERIENCE
 
-### SR. CONSULTING ENGINEER | Palo Alto Networks | Jan 2025 – Present
-**Network Security Architect & AI Security Specialist**
 
-- Spearhead the architecture and rollout of Palo Alto Networks' Hyperscale Security Fabric (HSF), reshaping how enterprises achieve high-speed, AI-ready security with 200+ Gbps throughput
-- Pioneer robust security frameworks for AI and machine learning platforms, proactively addressing threats with advanced adversarial defense and "AI red teaming"
-- Architect scalable security solutions that flex with dynamic cloud workloads, enabling customers to grow confidently—even in highly regulated industries
-- Partner closely with executive stakeholders to align technical innovation with organizational strategy and deliver transformative business outcomes
-- Lead advanced threat modeling and risk assessments, staying a step ahead of evolving cyber threats
-- Champion compliance for rigorous frameworks (FedRAMP, NIST, ISO), building trust and confidence for Fortune 500 customers
-- Consistently deliver substantial business value, contributing more than $30M in annual revenue through technical excellence and strategic leadership
+## PROFESSIONAL SUMMARY
 
-### SR. REFERENCE ARCHITECT | Palo Alto Networks | Apr 2022 – Jan 2025
-**Cloud Security Architecture Leader & Strategy Expert**
+**Enterprise Security & AI Solutions Executive &vert; Trusted by Fortune 500s to Secure Innovation**
 
-- Designed and delivered comprehensive security blueprints for large-scale, multi-cloud SaaS deployments across AWS, Azure, and GCP
-- Embedded strong security practices at every phase of the software lifecycle, transforming secure DevOps from aspiration to reality
-- Unified fragmented cloud infrastructures into seamless, operationally resilient systems that always meet compliance demands
-- Regularly researched, evaluated, and piloted emerging technologies, keeping clients a step ahead of the threat landscape
-
-### CONSULTING ENGINEER | Palo Alto Networks | 2019 – Apr 2022
-**Cloud Security Expert & Enterprise Solutions Architect**
-
-- Modernized cloud and hybrid security for global enterprises, elevating protection across complex, multi-cloud environments
-- Implemented Zero Trust and SASE frameworks, making security a core business enabler, not just a safeguard
-- Advised enterprise clients on security technology selection and integration, maximizing ROI and operational efficiency
-- Acted as a key link between technical and business stakeholders to ensure every solution served broader organizational goals
-
-### SOLUTIONS ARCHITECT | Chef Software | 2018 – 2019
-**DevSecOps & Secure Infrastructure Automation Specialist**
-
-- Integrated security seamlessly into DevOps workflows, dramatically reducing vulnerabilities while preserving team agility
-- Built automated provisioning and infrastructure-as-code pipelines that made compliance and security central—and effortless
-- Delivered actionable, developer-friendly security guidance, empowering product teams to adopt best practices confidently
-
-### DISTINGUISHED SYSTEMS ENGINEER, LEADER | Vyatta, a Brocade Company | 2013 – 2018
-**Enterprise Security and Network Architecture & Solutions Leader**
-
-**Enterprise Revenue Generation:**
-- Led network and security architecture implementations at Tier 1 service providers
-- Generated revenue exceeding $30M annually through innovative security solutions and architectural guidance
-- Delivered complex security architecture presentations and implementations
-
-**Industry Recognition:**
-- Awarded Systems Engineer of the Year (2014) for architecture excellence and customer success
-- Awarded Service Provider Team of the Year (2015) for security innovation leadership
-- Recognized for technical excellence and business impact
-
-**Strategy Leadership:**
-- Served as network security evangelist for enterprise security and networking transformations
-- Led secure implementation of NFV and SDN technologies
-- Pioneered software-defined network and security designs and implementations
-
-**Cross-Functional Leadership:**
-- Primary technical liaison between customers, product management, engineering, and executive leadership
-- Delivered complex architecture presentations and implementations
-- Managed multiple technical teams working on emerging software networking technologies
-
-**Compliance & Risk Management:**
-- Led enterprise security compliance initiatives
-- Ensured adherence to industry standards and regulatory requirements
-- Developed comprehensive risk management frameworks
-
-**Technical Sales Excellence:**
-- Served as technical "sales evangelist" for strategic direction in NFV network virtualization and SDN software networking
-- Acted as primary liaison interfacing between customers, product management, engineering, and CTO
-- Collaborated and provided business-winning guidance as Lead SE leading vCE and vCPE projects at AT&T
-
-### PRINCIPAL TECHNOLOGIST - OFFICE OF THE CTO | Dell | 2010 – 2014
-**Enterprise Security Strategy & Architecture Leadership**
-
-**Security Strategy Excellence:**
-- Provided strategic networking and security expertise to CTO and Executive team
-- Achieved 50% year-over-year growth through network-enhanced enterprise solutions
-- Created detailed competitive analysis assessments for the Networking Organization
-
-**Enterprise Technolgoy Evangelism:**
-- Developed and delivered company-wide network training programs
-- Established security-first approaches across enterprise infrastructure divisions
-- Trained entire sales organization including inside sales, field, and OEM/Partner teams
-
-**Customer Strategy:**
-- Presented enterprise technology vision to strategic customers
-- Created new revenue streams through advancded compute, network, and storage technology solutions
-- Developed key engagement with Dell's most strategic, large enterprise, global customers
-
-**Team Development & Leadership:**
-- Mentored field teams on network and security best practices and emerging technologies
-- Coached Dell's global network team across Server, Storage, and Networking Divisions
-- Provided leadership for both Regional and Annual Sales Meetings
-
-**Technical Leadership:**
-- Guided Product Group, Marketing, Sales, and Strategic Partners in developing Dell into a networking leader
-- Growing regional sales 50% in annual growth, exceeding quotas by 100%+ each quarter
-- Conducted product demos and Executive Briefing Center presentations
-
-### SOLUTIONS ARCHITECT | Brocade Communications | 2008 – 2010
-**Strategic Corporate Resource - Server Connectivity & FCoE Technologies**
-
-**New Business Development:**
-- Provided pivotal role in building new business and introducing new technology
-- Grew from start-up to $3M in sales and $1.2M in revenue in 6 months
-- Deployed solutions at 100+ enterprise customers
-
-**Performance Excellence:**
-- Exceeded goals by 600% including increasing quarter-over-quarter growth by +100%
-- Defined both go-to-market and communication strategies for new product lines
-- Recognized as highest selling technical resource within the division, generating $1.2 million in overall revenue within 6 months
-
-**Technical Evangelism:**
-- Served as strategic resource evangelizing Brocade Fiber Channel HBA and FCoE CNA products
-- Delivered technical presentations and proof-of-concept designs on server connectivity products
-- Collaborated with OEM partners to integrate Brocade solutions as storage networking foundation
-
-**Industry Recognition:**
-- Won President's Club Award in 2009 for exceptional performance and business impact
-
-### MANAGING CONSULTANT | Burwood Group | 2006 – 2008
-**Infrastructure Architecture & Consulting Leadership**
-
-**Practice Development:**
-- Conceptualized, launched and grew Storage and Virtualization Practice to $3 million in sales within 1st year
-- Trained and mentored team members on VMware, EMC and storage networking technologies and best practices
-- Led efforts of up to 10 resources on complex infrastructure projects
-
-**Revenue Generation:**
-- Captured $1 million in revenue for consulting services and $2 million in networking hardware sales within 1.5 years
-- Managed large-scale infrastructure projects valued up to $1 million
-- Established and enhanced relationships with clients and partners
-
-**Technical Consulting:**
-- Consulted with clients on networking, storage, virtualization, wireless and high-availability Cisco infrastructure design
-- Evaluated client technical environments and implemented effective solutions
-- Managed a $1 million network upgrade project for large hospital
-
-**Project Management:**
-- Planned and managed appropriate and on-time delivery of large multi-phase design, implementation and upgrade projects
-- Led all efforts to fully upgrade core legacy Cisco network infrastructure for Fortune 500 Heavy Machinery Manufacturer
-
-### MANAGER - NETWORK SERVICES / SR. NETWORK ENGINEER / NETWORK ENGINEER / SYSTEMS ENGINEER | John Deere & United Health Group | 1999 – 2006
-**Enterprise Infrastructure Leadership & Network Engineering**
-
-**Leadership & Management:**
-- Managed a team of 12 engineers across network and systems operations
-- Provided leadership and framework to actively identify needs and resolve critical issues
-- Led migration of Health Care business unit (40,000 users) from John Deere to United Health Group
-
-**Infrastructure Architecture:**
-- Architected enterprise infrastructure supporting 40,000+ users across 400+ sites at John Deere
-- Managed technology direction, cost benefit analysis, project planning and program management
-- Researched, introduced and facilitated adoption of technologies and enterprise standards
-- Built two new datacenters from ground up
-
-**Technical Innovation:**
-- Designed and developed a Total Cost of Ownership (TCO) system built with Visual Basic
-- Implemented comprehensive technology solutions for multi-thousand user environments
-- Established enterprise technology standards and best practices
-
-**Enterprise Scale Operations:**
-- Managed enterprise infrastructure supporting distributed user base across multiple geographic locations
-- Implemented comprehensive frameworks ensuring HIPAA, SOX, and enterprise compliance requirements
-- Led enterprise security transformations including secure migration from legacy to modern architectures
+Seasoned security architect and engineering leader passionate about translating complex technology into powerful business outcomes. Expert at building resilient, scalable network and security frameworks for the cloud and AI era—enabling innovation at speed and scale. Adept at cross-functional collaboration, pioneering secure AI/ML deployments, and continuously tracking emerging threats and technologies. Committed to bridging business goals with technical excellence and empowering teams to turn security into a competitive advantage.
 
 ---
 
-### ENTERPRISE AI SECURITY PLATFORM | perfecXion.ai | 2024 – Present
-**Founder & Chief Security Architect (Enterprise AI Security Innovation)**
+## KEY SKILLS & COMPETENCIES
 
-**Comprehensive AI Security Architecture:**
+- **Security Architecture & Cloud:** Cloud-native frameworks, Zero Trust, SASE, defense-in-depth, multi-cloud environments (AWS, Azure, GCP), Cloud Security (Public/Hybrid/Multi-Cloud)
+- **AI/ML Security & Safety:** Adversarial threat modeling, AI red teaming, model risk mitigation, responsible AI adoption, AI Safety
+- **DevSecOps & Automation:** Secure SDLC, Infrastructure-as-Code (Terraform, Ansible, CloudFormation), continuous compliance integration
+- **Compliance & Risk Management:** FedRAMP, NIST, ISO, PCI DSS, HIPAA, SOC 2, SOX, risk frameworks
+- **Leadership & Collaboration:** Executive partnership, mentoring, stakeholder alignment, Go-To-Market enablement
+- **Emerging Technologies:** Evaluation of next-gen security tech, pilot programs, innovation championing
+- **Communication & Evangelism:** Translating technical risk into business insights, customer engagement, technical evangelism
 
-**ADAPT-AI:** Enterprise AI security platform implementing secure AI adoption patterns with real-time threat detection, behavioral analysis, and automated compliance validation
+---
 
-**perfecX Red-T:** Advanced AI red team testing platform using enterprise-grade penetration testing methodologies for AI systems and SaaS environments
+## PROFESSIONAL EXPERIENCE
 
-**perfecX Agent:** Real-time AI monitoring solution with enterprise security controls, behavioral analysis, and compliance reporting capabilities
+### SR. CONSULTING ENGINEER &vert; Palo Alto Networks &vert; Jan 2025 – Present
 
-**perfecX Comply:** Enterprise compliance automation platform ensuring AI systems meet FedRAMP, NIST, ISO 27001, and SOC 2 requirements
+- Spearhead the design and rollout of Palo Alto Networks' Hyperscale Security Fabric (HSF), delivering high-speed, AI-ready security with 200+ Gbps throughput for mission-critical workloads.
+- Pioneer advanced security frameworks for AI/ML platforms, driving initiatives in adversarial defense, AI red teaming, and proactive threat mitigation.
+- Architect and implement scalable security solutions supporting dynamic cloud workloads, enabling key clients to grow confidently in regulated industries.
+- Advise and partner with executive stakeholders to align technical direction with strategic business goals and drive transformative digital initiatives.
+- Lead comprehensive risk assessments and threat modeling programs to maintain robust defense against evolving cyber threats.
+- Drive compliance with FedRAMP, NIST, ISO, and other security frameworks, facilitating secure AI adoption for clients.
+- Consistently deliver substantial business value, contributing $30M+ in annual revenue through technical innovation and leadership.
 
-**perfecX Browse:** Enterprise browser security extension implementing advanced controls for AI-generated content protection and prompt injection defense
+---
 
-**Intellectual Property Development:**
-- **Patent Applications Filed:** Three provisional patent applications filed (2024-2025) covering innovative AI security architectures and threat detection methodologies
-- Focus areas include real-time AI threat detection, automated compliance validation for AI systems, and enterprise-grade prompt injection defense mechanisms
-- Patents pending for novel approaches to securing AI/ML workloads in multi-cloud environments
+### SR. REFERENCE ARCHITECT &vert; Palo Alto Networks &vert; Apr 2022 – Jan 2025
 
-**Enterprise Security Implementation:**
-- Developed secure AI adoption frameworks based on NIST Cybersecurity Framework and ISO 27001 standards
-- Implemented enterprise-grade security controls for AI workloads including encryption, access controls, and audit logging
-- Created compliance automation ensuring adherence to FedRAMP and federal security requirements for AI systems
-- Designed multi-cloud security architectures supporting secure AI deployment across AWS, Azure, and GCP
-- Established enterprise threat modeling frameworks specifically designed for AI systems and SaaS applications
+- Designed and delivered end-to-end security architectures for large-scale, multi-cloud SaaS environments (AWS, Azure, GCP).
+- Integrated robust security practices throughout the SDLC to advance secure DevOps and accelerate cloud-native adoption.
+- Unified fragmented infrastructures into operationally resilient, compliant, and highly secure ecosystems for global customers.
+- Researched and piloted emerging technologies, ensuring clients remained ahead of evolving threats.
 
-**Innovation & Research Leadership:**
-- Pioneered enterprise security patterns for secure AI adoption in regulated industries
-- Developed comprehensive security frameworks bridging traditional enterprise security with next-generation AI technologies
-- Created thought leadership content and technical documentation on enterprise AI security best practices
-- Established security architecture patterns for large-scale SaaS AI implementations
+---
 
-### OPEN SOURCE SECURITY INNOVATION | GitHub Portfolio | 2019 – Present
-**Community Security Leadership & Technical Innovation**
+### CONSULTING ENGINEER &vert; Palo Alto Networks &vert; 2019 – Apr 2022
 
-**Enterprise Security Tools:**
-- **airs_pyrit:** Enterprise AI Runtime Security integration with comprehensive threat detection and compliance reporting
-- **secure_chatbot:** Enterprise-grade secure AI implementation with advanced safety controls and audit logging
-- **genai-security-guide:** Comprehensive enterprise AI security framework based on NIST and OWASP standards
-- **OSINT-Scan-Python:** Enterprise security intelligence gathering with threat assessment and risk analysis capabilities
+- Enhanced cloud and hybrid security for industry leaders, modernizing defenses and raising protection across complex multi-cloud environments.
+- Implemented Zero Trust and SASE solutions to make security a competitive driver.
+- Provided expert guidance on technology selection and integration to ensure optimal ROI and smooth operations.
+- Acted as trusted advisor and liaison between technical and business teams to deliver impactful security solutions.
 
-**Infrastructure Security Automation:**
-- **terraform-wizardry:** Enterprise Infrastructure-as-Code templates with built-in security controls and compliance automation
-- Security monitoring frameworks implementing automated threat detection and incident response for enterprise environments
-- Compliance automation tools ensuring adherence to FedRAMP, NIST, and ISO standards
+---
 
+### SOLUTIONS ARCHITECT &vert; Chef Software &vert; 2018 – 2019
+
+- Embedded security into DevOps workflows, rapidly reducing vulnerabilities while keeping product teams agile.
+- Built automated provisioning and Infrastructure-as-Code pipelines to make security and compliance seamless and scalable.
+- Delivered practical, developer-focused guidance enabling adoption of security best practices.
+
+---
+
+### DISTINGUISHED SYSTEMS ENGINEER, LEADER &vert; Vyatta (Brocade) &vert; 2013 – 2018
+
+- Led network and security architecture for Tier 1 service providers, driving large-scale deployments and generating $30M+ annual revenue.
+- Recognized for architectural innovation and leadership (Systems Engineer of the Year; Service Provider Team of the Year).
+- Acted as primary technical liaison, delivering complex solutions and presentations to executives and customers.
+- Enabled secure NFV and SDN deployments, pioneering modern software-defined architectures.
+- Supported regulatory compliance initiatives and risk management for enterprise rollouts.
+
+---
+
+### PRINCIPAL TECHNOLOGIST – OFFICE OF THE CTO &vert; Dell &vert; 2010 – 2014
+
+- Strategic advisor to CTO and executive teams, enabling 50%+ YOY growth through security and networking solutions.
+- Developed organization-wide technical evangelism and training programs.
+- Crafted competitive analysis and strategic roadmaps, driving new revenue streams and customer wins.
+- Mentored global teams in advanced networking and security.
+- Led demos and briefings establishing Dell as a security and networking leader.
+
+---
+
+### SOLUTIONS ARCHITECT &vert; Brocade Communications &vert; 2008 – 2010
+
+- Drove new business for server connectivity and storage networking, surpassing growth targets by 600%.
+- Led go-to-market strategies, technical evangelism, and OEM integrations, earning top sales awards.
+- Delivered technical solutions and presentations for more than 100 enterprise deployments.
+
+---
+
+### MANAGING CONSULTANT &vert; Burwood Group &vert; 2006 – 2008
+
+- Launched and grew a Storage and Virtualization Practice, securing $3M in first-year sales.
+- Managed large infrastructure projects and led teams of up to 10 engineers.
+- Delivered technical consulting and results for enterprise clients in networking, storage, and high-availability environments.
+
+---
+
+### MANAGEMENT & ADVANCED ENGINEERING &vert; John Deere & United Health Group &vert; 1999 – 2006
+
+- Led a 12-person engineering team for enterprise networks supporting 40,000+ users across 400+ sites.
+- Directed migrations, datacenter builds, and the transition of a 40,000-user business unit between organizations.
+- Implemented security and compliance frameworks (HIPAA, SOX, NIST).
+
+---
+
+## ENTERPRISE AI SECURITY PLATFORM &vert; [perfecXion.ai](https://perfecxion.ai) &vert; 2024 – Present
+
+**Founder & Chief Security Architect (AI Security Innovation)**
+
+- Developed **ADAPT-AI**: real-time threat detection, behavioral analysis, and compliance automation for enterprise AI.
+- Built **perfecX Red-T**: enterprise-grade AI red teaming and penetration testing tools for AI/SaaS.
+- Created **perfecX Agent**: real-time AI monitoring and compliance reporting.
+- Built **perfecX Comply**: automated compliance for FedRAMP, NIST, ISO 27001, SOC 2.
+- Released **perfecX Browse**: browser security extension for AI content protection and prompt injection defense.
+- Filed three provisional patents on AI security architectures and threat detection.
+- Authored security frameworks for AI aligned with NIST/ISO, and established patterns for multi-cloud AI deployments.
+
+---
+
+## OPEN SOURCE SECURITY INNOVATION &vert; GitHub Portfolio &vert; 2019 – Present
+
+- Developed enterprise AI security tools, including:
+    - **airs_pyrit:** Runtime security for AI; threat detection and compliance.
+    - **secure_chatbot:** AI implementations with advanced safety controls.
+    - **genai-security-guide:** NIST/OWASP-based enterprise AI security framework.
+    - **OSINT-Scan-Python:** Threat intelligence and risk analysis automation.
+    - **terraform-wizardry:** Secure Infrastructure-as-Code pipelines and compliance automation.
+
+--- 
+      
 ## TECHNICAL PROJECTS & INNOVATIONS
 
 ### Compliance & Risk Management (Expert Level)

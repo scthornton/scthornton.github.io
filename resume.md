@@ -19,123 +19,56 @@ permalink: /resume/
 ---
 
 ## PROFESSIONAL SUMMARY
-Enterprise Security Architect and AI Security Pioneer with 25+ years of comprehensive technical expertise spanning the complete technology stack - from databases and networking infrastructure through cloud computing, virtualization, and next-generation AI/ML security solutions. Strategic career evolution from hands-on systems administration through enterprise security architecture to founding an AI security company. Deep foundation in networking, datacenter operations, and security architecture, with proven expertise across databases, server administration, storage systems, virtualization platforms, cloud infrastructure, software development, and AI/ML systems security.
+Seasoned security architect and engineering leader with a passion for translating complex technology into powerful business outcomes. Expert at building resilient, scalable security frameworks for the cloud and AI era—enabling Fortune 500 enterprises to innovate safely, rapidly, and at scale. Adept at driving cross-functional collaboration, pioneering secure AI/ML deployments, and continuously scouting the horizon for emerging threats and technologies. Fiercely committed to bridging business goals with technical excellence, and empowering teams to turn security into a competitive advantage.
 
-**Core Technical Evolution:**
-- **1998-2002:** Database administration, desktop/server support, networking foundations
-- **2002-2008:** Network engineering, storage architecture, enterprise infrastructure
-- **2008-2014:** Security architecture emergence, cloud adoption, virtualization expertise  
-- **2014-2022:** Enterprise security leadership, multi-cloud expertise, DevSecOps
-- **2022-Present:** AI/ML security specialization, secure AI adoption, enterprise AI governance
+---
+
+## KEY SKILLS & COMPETENCIES
+- **Enterprise Security Architecture:** Cloud-native frameworks, zero trust, SASE, defense-in-depth, multi-cloud environments (AWS, Azure, GCP)
+- **AI/ML Security:** Adversarial threat modeling, AI red teaming, model risk mitigation, responsible AI adoption
+- **DevSecOps:** Secure SDLC, automation with Infrastructure-as-Code, continuous compliance integration
+- **Cloud Transformation:** SaaS migration security, cloud access & identity control, compliance-driven design (FedRAMP, NIST, ISO)
+- **Leadership & Influence:** Executive partnership, technical mentoring, stakeholder alignment, Go-To-Market enablement
+- **Emerging Tech:** Evaluation and integration of next-gen security solutions, pilot programs, and innovation championing
+- **Communication:** Translating technical risk into business insights, technical evangelism, effective customer engagement
 
 ---
 
 ## PROFESSIONAL EXPERIENCE
 
-### SR. CONSULTING ENGINEER | Palo Alto Networks | January 2025 – Present
+### SR. CONSULTING ENGINEER | Palo Alto Networks | Jan 2025 – Present
 **Enterprise Security Architect & AI Security Specialist**
 
-**Hyperscale Security Fabric (HSF) Leadership:**
-- Architect and deploy Palo Alto Networks' revolutionary HSF platform
-- Achieve 200+ Gbps performance in single instances through integrated firewalling and load balancing architecture
-- Deliver real-time security for AI-era enterprise workloads
+- Spearhead the architecture and rollout of Palo Alto Networks' Hyperscale Security Fabric (HSF), reshaping how enterprises achieve high-speed, AI-ready security with 200+ Gbps throughput
+- Pioneer robust security frameworks for AI and machine learning platforms, proactively addressing threats with advanced adversarial defense and "AI red teaming"
+- Architect scalable security solutions that flex with dynamic cloud workloads, enabling customers to grow confidently—even in highly regulated industries
+- Partner closely with executive stakeholders to align technical innovation with organizational strategy and deliver transformative business outcomes
+- Lead advanced threat modeling and risk assessments, staying a step ahead of evolving cyber threats
+- Champion compliance for rigorous frameworks (FedRAMP, NIST, ISO), building trust and confidence for Fortune 500 customers
+- Consistently deliver substantial business value, contributing more than $30M in annual revenue through technical excellence and strategic leadership
 
-**AI/ML Security Architecture:**
-- Engineer comprehensive security architectures for AI/ML systems
-- Specialize in adversarial machine learning defense, model protection, and AI red teaming methodologies
-- Develop security controls for GPU computing environments and machine learning pipelines
-- Create enterprise-grade protection against emerging AI-specific threats
-
-**Auto-Scaling Security Architecture:**
-- Architect elastic scalability solutions that automatically adapt security architecture
-- Separate components into dedicated load balancers and firewall instances without manual intervention
-- Optimize for modern SaaS and enterprise AI deployments
-
-**Security Strategy & Vision:**
-- Define and lead security architecture strategies for enterprise customers
-- Ensure alignment with business objectives across Fortune 500 organizations
-- Provide effective communication to executive leadership
-
-**Secure AI Adoption:**
-- Pioneer secure AI integration for enterprise customers
-- Develop architectural patterns and controls for safe AI technology deployment
-- Leverage HSF's session resiliency and high-performance capabilities for production SaaS environments
-
-**Threat Modeling & Risk Assessment:**
-- Drive comprehensive threat modeling initiatives across customer product lifecycles
-- Identify attack vectors and design effective security mitigations
-- Conduct enterprise risk assessments for AI/ML systems
-
-**Compliance Architecture:**
-- Lead architectural efforts for FedRAMP, NIST, and ISO compliance
-- Ensure customer solutions meet rigorous federal and enterprise security requirements
-
-**Revenue Impact:**
-- Generated revenue exceeding $30M annually through innovative security solutions and architectural guidance
-
-### SR. REFERENCE ARCHITECT | Palo Alto Networks | April 2022 – January 2025
+### SR. REFERENCE ARCHITECT | Palo Alto Networks | Apr 2022 – Jan 2025
 **Cloud Security Architecture Leader & Strategy Expert**
 
-**Enterprise Security Architecture:**
-- Engineered comprehensive security architectures for large-scale SaaS environments across AWS, Azure, and GCP
-- Translated business security strategies into actionable technical implementations
-- Created standardized security patterns for enterprise-scale deployments
+- Designed and delivered comprehensive security blueprints for large-scale, multi-cloud SaaS deployments across AWS, Azure, and GCP
+- Embedded strong security practices at every phase of the software lifecycle, transforming secure DevOps from aspiration to reality
+- Unified fragmented cloud infrastructures into seamless, operationally resilient systems that always meet compliance demands
+- Regularly researched, evaluated, and piloted emerging technologies, keeping clients a step ahead of the threat landscape
 
-**Secure SDLC Integration:**
-- Led embedding of security controls across software development lifecycles
-- Ensured security best practices from design through deployment for modern cloud applications
-- Integrated security controls throughout development pipelines
-
-**Multi-Cloud Security Strategy:**
-- Developed enterprise-grade security frameworks spanning multiple cloud platforms
-- Created standardized security patterns for enterprise-scale deployments
-- Established consistent security postures across diverse cloud environments
-
-**Innovation & Research:**
-- Researched next-generation security technologies and controls
-- Continuously matured enterprise security postures and product security architectures
-- Evaluated emerging security solutions for enterprise adoption
-
-### CONSULTING ENGINEER | Palo Alto Networks | 2019 – April 2022
+### CONSULTING ENGINEER | Palo Alto Networks | 2019 – Apr 2022
 **Cloud Security Expert & Enterprise Solutions Architect**
 
-**Enterprise Cloud Security:**
-- Led comprehensive security initiatives across AWS, Azure, GCP, and OCI
-- Enhanced cybersecurity posture for enterprise customers with complex multi-cloud SaaS ecosystems
-- Implemented security controls for distributed cloud workloads
-
-**Zero Trust Implementation:**
-- Established SASE and Zero Trust security architectures
-- Revolutionized enterprise security approaches for distributed cloud workloads
-- Implemented Identity-as-a-Service solutions and Security by Design principles
-
-**Security Technology Selection:**
-- Guided selection and deployment of cybersecurity technologies including SIEM, firewalls, DLP, and IAM solutions
-- Evaluated and implemented enterprise security tool stacks
-- Optimized security technology investments for maximum effectiveness
-
-**Stakeholder Alignment:**
-- Collaborated across multiple functions to align security strategies with business objectives
-- Fostered knowledge sharing in cloud security best practices
-- Facilitated cross-functional security initiatives
+- Modernized cloud and hybrid security for global enterprises, elevating protection across complex, multi-cloud environments
+- Implemented Zero Trust and SASE frameworks, making security a core business enabler, not just a safeguard
+- Advised enterprise clients on security technology selection and integration, maximizing ROI and operational efficiency
+- Acted as a key link between technical and business stakeholders to ensure every solution served broader organizational goals
 
 ### SOLUTIONS ARCHITECT | Chef Software | 2018 – 2019
 **DevSecOps & Secure Infrastructure Automation Specialist**
 
-**Secure SDLC Implementation:**
-- Embedded security controls into software development lifecycles using DevSecOps practices
-- Reduced security vulnerabilities by 40% while maintaining deployment velocity
-- Integrated security throughout automated deployment pipelines
-
-**Infrastructure Security Automation:**
-- Designed and implemented secure configuration management and infrastructure automation
-- Ensured compliance with enterprise security standards
-- Created Infrastructure-as-Code security templates
-
-**Security Architecture Consulting:**
-- Provided security architecture guidance for enterprise DevOps transformations
-- Integrated security controls throughout automated deployment pipelines
-- Established security-first DevOps practices
+- Integrated security seamlessly into DevOps workflows, dramatically reducing vulnerabilities while preserving team agility
+- Built automated provisioning and infrastructure-as-code pipelines that made compliance and security central—and effortless
+- Delivered actionable, developer-friendly security guidance, empowering product teams to adopt best practices confidently
 
 ### DISTINGUISHED SYSTEMS ENGINEER, LEADER | Vyatta, a Brocade Company | 2013 – 2018
 **Enterprise Security Architecture & Solutions Leader**
@@ -406,6 +339,14 @@ Western Illinois University & University of Iowa
 - **SEC504: Hacker Tools, Techniques, and Incident Handling** - GIAC Certified Incident Handler Certification (GCIH)
 - **SEC488: Cloud Security Essentials** - GIAC Cloud Security Essentials (GCLD)
 - **SEC401: Security Essentials - Network, Endpoint, and Cloud Essentials** - GIAC Security Essentials (GSEC)
+
+**NVIDIA Academy Certifications:**
+- **AI Infrastructure and Operations Fundamentals** (June 2025)
+- **The Fundamentals of RDMA Programming** (June 2025)
+- **InfiniBand Network Administration** (June 2025)
+- **InfiniBand Essentials** (June 2025)
+- **Introduction to Networking** (June 2025)
+- **AI for All: From Basics to GenAI Practice** (August 2025)
 
 ---
 

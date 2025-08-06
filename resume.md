@@ -4,13 +4,6 @@ title: Scott Thornton - Master Resume Database
 permalink: /resume/
 ---
 
-
-
-
-
-
-
-
 # SCOTT THORNTON - MASTER RESUME DATABASE
 ## Comprehensive Career Chronicle (1998-2025)
 
@@ -18,36 +11,15 @@ permalink: /resume/
 **Email:** scthornton@gmail.com  
 **Phone:** (843) 764-7298  
 **Location:** Mount Pleasant, South Carolina  
-**LinkedIn:** linkedin.com/in/scthornton  
-**GitHub:** github.com/scthornton  
-**Company:** perfecXion.ai (Founder)  
-**Website:** https://scthornton.github.io/
+**LinkedIn:** [linkedin.com/in/scthornton](https://linkedin.com/in/scthornton)  
+**GitHub:** [github.com/scthornton](https://github.com/scthornton)  
+**Company:** [perfecXion.ai](https://perfecxion.ai) (Founder)  
+**Website:** [https://scthornton.github.io/](https://scthornton.github.io/)
 
 ---
 
 ## PROFESSIONAL SUMMARY
 Seasoned security architect and engineering leader with a passion for translating complex technology into powerful business outcomes. Expert at building resilient, scalable network and security frameworks for the cloud and AI era—enabling Fortune 500 enterprises to innovate safely, rapidly, and at scale. Adept at driving cross-functional collaboration, pioneering secure AI/ML deployments, and continuously scouting the horizon for emerging threats and technologies. Fiercely committed to bridging business goals with technical excellence, and empowering teams to turn security into a competitive advantage.
-
----
-
-## KEY SKILLS & COMPETENCIES
-- **Enterprise Security Architecture:** Cloud-native frameworks, zero trust, SASE, defense-in-depth, multi-cloud environments (AWS, Azure, GCP)
-- **AI/ML Security:** Adversarial threat modeling, AI red teaming, model risk mitigation, responsible AI adoption
-- **DevSecOps:** Secure SDLC, automation with Infrastructure-as-Code, continuous compliance integration
-- **Cloud Transformation:** SaaS migration security, cloud access & identity control, compliance-driven design (FedRAMP, NIST, ISO)
-- **Leadership & Influence:** Executive partnership, technical mentoring, stakeholder alignment, Go-To-Market enablement
-- **Emerging Tech:** Evaluation and integration of next-gen security solutions, pilot programs, and innovation championing
-- **Communication:** Translating technical risk into business insights, technical evangelism, effective customer engagement
-
----
-
-
-
-## PROFESSIONAL SUMMARY
-
-**Enterprise Security & AI Solutions Executive &vert; Trusted by Fortune 500s to Secure Innovation**
-
-Seasoned security architect and engineering leader passionate about translating complex technology into powerful business outcomes. Expert at building resilient, scalable network and security frameworks for the cloud and AI era—enabling innovation at speed and scale. Adept at cross-functional collaboration, pioneering secure AI/ML deployments, and continuously tracking emerging threats and technologies. Committed to bridging business goals with technical excellence and empowering teams to turn security into a competitive advantage.
 
 ---
 
@@ -65,7 +37,7 @@ Seasoned security architect and engineering leader passionate about translating 
 
 ## PROFESSIONAL EXPERIENCE
 
-### SR. CONSULTING ENGINEER &vert; Palo Alto Networks &vert; Jan 2025 – Present
+### SR. CONSULTING ENGINEER | Palo Alto Networks | Jan 2025 – Present
 
 - Spearhead the design and rollout of Palo Alto Networks' Hyperscale Security Fabric (HSF), delivering high-speed, AI-ready security with 200+ Gbps throughput for mission-critical workloads.
 - Pioneer advanced security frameworks for AI/ML platforms, driving initiatives in adversarial defense, AI red teaming, and proactive threat mitigation.
@@ -77,7 +49,7 @@ Seasoned security architect and engineering leader passionate about translating 
 
 ---
 
-### SR. REFERENCE ARCHITECT &vert; Palo Alto Networks &vert; Apr 2022 – Jan 2025
+### SR. REFERENCE ARCHITECT | Palo Alto Networks | Apr 2022 – Jan 2025
 
 - Designed and delivered end-to-end security architectures for large-scale, multi-cloud SaaS environments (AWS, Azure, GCP).
 - Integrated robust security practices throughout the SDLC to advance secure DevOps and accelerate cloud-native adoption.
@@ -86,7 +58,7 @@ Seasoned security architect and engineering leader passionate about translating 
 
 ---
 
-### CONSULTING ENGINEER &vert; Palo Alto Networks &vert; 2019 – Apr 2022
+### CONSULTING ENGINEER | Palo Alto Networks | 2019 – Apr 2022
 
 - Enhanced cloud and hybrid security for industry leaders, modernizing defenses and raising protection across complex multi-cloud environments.
 - Implemented Zero Trust and SASE solutions to make security a competitive driver.
@@ -95,7 +67,7 @@ Seasoned security architect and engineering leader passionate about translating 
 
 ---
 
-### SOLUTIONS ARCHITECT &vert; Chef Software &vert; 2018 – 2019
+### SOLUTIONS ARCHITECT | Chef Software | 2018 – 2019
 
 - Embedded security into DevOps workflows, rapidly reducing vulnerabilities while keeping product teams agile.
 - Built automated provisioning and Infrastructure-as-Code pipelines to make security and compliance seamless and scalable.
@@ -103,7 +75,7 @@ Seasoned security architect and engineering leader passionate about translating 
 
 ---
 
-### DISTINGUISHED SYSTEMS ENGINEER, LEADER &vert; Vyatta (Brocade) &vert; 2013 – 2018
+### DISTINGUISHED SYSTEMS ENGINEER, LEADER | Vyatta (Brocade) | 2013 – 2018
 
 - Led network and security architecture for Tier 1 service providers, driving large-scale deployments and generating $30M+ annual revenue.
 - Recognized for architectural innovation and leadership (Systems Engineer of the Year; Service Provider Team of the Year).
@@ -113,7 +85,7 @@ Seasoned security architect and engineering leader passionate about translating 
 
 ---
 
-### PRINCIPAL TECHNOLOGIST – OFFICE OF THE CTO &vert; Dell &vert; 2010 – 2014
+### PRINCIPAL TECHNOLOGIST – OFFICE OF THE CTO | Dell | 2010 – 2014
 
 - Strategic advisor to CTO and executive teams, enabling 50%+ YOY growth through security and networking solutions.
 - Developed organization-wide technical evangelism and training programs.
@@ -123,7 +95,7 @@ Seasoned security architect and engineering leader passionate about translating 
 
 ---
 
-### SOLUTIONS ARCHITECT &vert; Brocade Communications &vert; 2008 – 2010
+### SOLUTIONS ARCHITECT | Brocade Communications | 2008 – 2010
 
 - Drove new business for server connectivity and storage networking, surpassing growth targets by 600%.
 - Led go-to-market strategies, technical evangelism, and OEM integrations, earning top sales awards.
@@ -131,7 +103,7 @@ Seasoned security architect and engineering leader passionate about translating 
 
 ---
 
-### MANAGING CONSULTANT &vert; Burwood Group &vert; 2006 – 2008
+### MANAGING CONSULTANT | Burwood Group | 2006 – 2008
 
 - Launched and grew a Storage and Virtualization Practice, securing $3M in first-year sales.
 - Managed large infrastructure projects and led teams of up to 10 engineers.
@@ -139,7 +111,7 @@ Seasoned security architect and engineering leader passionate about translating 
 
 ---
 
-### MANAGEMENT & ADVANCED ENGINEERING &vert; John Deere & United Health Group &vert; 1999 – 2006
+### MANAGEMENT & ADVANCED ENGINEERING | John Deere & United Health Group | 1999 – 2006
 
 - Led a 12-person engineering team for enterprise networks supporting 40,000+ users across 400+ sites.
 - Directed migrations, datacenter builds, and the transition of a 40,000-user business unit between organizations.
@@ -147,7 +119,7 @@ Seasoned security architect and engineering leader passionate about translating 
 
 ---
 
-## ENTERPRISE AI SECURITY PLATFORM &vert; [perfecXion.ai](https://perfecxion.ai) &vert; 2024 – Present
+## ENTERPRISE AI SECURITY PLATFORM | [perfecXion.ai](https://perfecxion.ai) | 2024 – Present
 
 **Founder & Chief Security Architect (AI Security Innovation)**
 
@@ -161,7 +133,7 @@ Seasoned security architect and engineering leader passionate about translating 
 
 ---
 
-## OPEN SOURCE SECURITY INNOVATION &vert; GitHub Portfolio &vert; 2019 – Present
+## OPEN SOURCE SECURITY INNOVATION | GitHub Portfolio | 2019 – Present
 
 - Developed enterprise AI security tools, including:
     - **airs_pyrit:** Runtime security for AI; threat detection and compliance.
@@ -280,7 +252,7 @@ Western Illinois University & University of Iowa
 **Systems Engineer of the Year (2014)** - Brocade/Vyatta (Enterprise Architecture Excellence)  
 **Service Provider Team of the Year (2015)** - Brocade/Vyatta (Innovation Leadership)  
 **Challenger Team of the Year (2015)** - Brocade/Vyatta  
-**Enterprise Master (2013)** - Dell (Strategic Technlogly Leadership)  
+**Enterprise Master (2013)** - Dell (Strategic Technology Leadership)  
 **President's Club Award (2009)** - Brocade (Technology Implementation Excellence)  
 **Enterprise Architecture Leader (2005)** - John Deere  
 **Top Social Media Ranked Employee (2016 & 2017)** - Brocade/Vyatta
@@ -373,7 +345,7 @@ Western Illinois University & University of Iowa
 *"Scott has consistently been an extremely detail-oriented individual who's always careful to keep the best interests of his customers in mind. His work ethic and willingness to creatively find the best solutions makes him one of the finest engineers I've had the pleasure to do business with."*
 
 **Jay Duitsman - Technology Executive | Digital Transformation Leader**  
-*"I enjoyed working with Scott while he was an intern and later as a full-time employee at John Deere Health/UnitedHealth care. Scott was always cheerful and willing to take on any task and see it through to a successful completion. Scott has excellent interpesonal skills that compement his obvious technical accomplishments."*
+*"I enjoyed working with Scott while he was an intern and later as a full-time employee at John Deere Health/UnitedHealth care. Scott was always cheerful and willing to take on any task and see it through to a successful completion. Scott has excellent interpersonal skills that complement his obvious technical accomplishments."*
 
 **David Young - Chief Revenue Officer at Observo AI**  
 *"Working with Scott has always been a pleasure. He was truly an asset to the EMC Partner Community and viewed as an extension of the EMC sales and technical teams. Scott also put his customers first and was always viewed as a real partner vs. a consultant or vendor. His strong technical background provides a great foundation for his ability to design and articulate the value of the solution to his customers. I would highly recommend Scott to anyone looking for a driven and talented professional."*

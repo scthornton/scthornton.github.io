@@ -19,7 +19,7 @@ permalink: /resume/
 ---
 
 ## PROFESSIONAL SUMMARY
-Seasoned security architect and engineering leader with a passion for translating complex technology into powerful business outcomes. Expert at building resilient, scalable security frameworks for the cloud and AI era—enabling Fortune 500 enterprises to innovate safely, rapidly, and at scale. Adept at driving cross-functional collaboration, pioneering secure AI/ML deployments, and continuously scouting the horizon for emerging threats and technologies. Fiercely committed to bridging business goals with technical excellence, and empowering teams to turn security into a competitive advantage.
+Seasoned security architect and engineering leader with a passion for translating complex technology into powerful business outcomes. Expert at building resilient, scalable network and security frameworks for the cloud and AI era—enabling Fortune 500 enterprises to innovate safely, rapidly, and at scale. Adept at driving cross-functional collaboration, pioneering secure AI/ML deployments, and continuously scouting the horizon for emerging threats and technologies. Fiercely committed to bridging business goals with technical excellence, and empowering teams to turn security into a competitive advantage.
 
 ---
 
@@ -37,7 +37,7 @@ Seasoned security architect and engineering leader with a passion for translatin
 ## PROFESSIONAL EXPERIENCE
 
 ### SR. CONSULTING ENGINEER | Palo Alto Networks | Jan 2025 – Present
-**Enterprise Security Architect & AI Security Specialist**
+**Network Security Architect & AI Security Specialist**
 
 - Spearhead the architecture and rollout of Palo Alto Networks' Hyperscale Security Fabric (HSF), reshaping how enterprises achieve high-speed, AI-ready security with 200+ Gbps throughput
 - Pioneer robust security frameworks for AI and machine learning platforms, proactively addressing threats with advanced adversarial defense and "AI red teaming"
@@ -71,26 +71,26 @@ Seasoned security architect and engineering leader with a passion for translatin
 - Delivered actionable, developer-friendly security guidance, empowering product teams to adopt best practices confidently
 
 ### DISTINGUISHED SYSTEMS ENGINEER, LEADER | Vyatta, a Brocade Company | 2013 – 2018
-**Enterprise Security Architecture & Solutions Leader**
+**Enterprise Security and Network Architecture & Solutions Leader**
 
 **Enterprise Revenue Generation:**
-- Led security architecture implementations at Tier 1 service providers
+- Led network and security architecture implementations at Tier 1 service providers
 - Generated revenue exceeding $30M annually through innovative security solutions and architectural guidance
 - Delivered complex security architecture presentations and implementations
 
 **Industry Recognition:**
-- Awarded Systems Engineer of the Year (2014) for security architecture excellence and customer success
+- Awarded Systems Engineer of the Year (2014) for architecture excellence and customer success
 - Awarded Service Provider Team of the Year (2015) for security innovation leadership
 - Recognized for technical excellence and business impact
 
-**Security Strategy Leadership:**
-- Served as security evangelist for enterprise security transformations
+**Strategy Leadership:**
+- Served as network security evangelist for enterprise security and networking transformations
 - Led secure implementation of NFV and SDN technologies
-- Pioneered software-defined security approaches
+- Pioneered software-defined network and security designs and implementations
 
-**Cross-Functional Security Leadership:**
-- Primary security liaison between customers, product management, engineering, and executive leadership
-- Delivered complex security architecture presentations and implementations
+**Cross-Functional Leadership:**
+- Primary technical liaison between customers, product management, engineering, and executive leadership
+- Delivered complex architecture presentations and implementations
 - Managed multiple technical teams working on emerging software networking technologies
 
 **Compliance & Risk Management:**
@@ -107,22 +107,22 @@ Seasoned security architect and engineering leader with a passion for translatin
 **Enterprise Security Strategy & Architecture Leadership**
 
 **Security Strategy Excellence:**
-- Provided strategic security input to CTO and Executive team
-- Achieved 50% year-over-year growth through security-enhanced enterprise solutions
+- Provided strategic networking and security expertise to CTO and Executive team
+- Achieved 50% year-over-year growth through network-enhanced enterprise solutions
 - Created detailed competitive analysis assessments for the Networking Organization
 
-**Enterprise Security Evangelism:**
-- Developed and delivered company-wide security training programs
+**Enterprise Technolgoy Evangelism:**
+- Developed and delivered company-wide network training programs
 - Established security-first approaches across enterprise infrastructure divisions
 - Trained entire sales organization including inside sales, field, and OEM/Partner teams
 
-**Customer Security Strategy:**
-- Presented enterprise security vision to strategic customers
-- Created new revenue streams through security-aligned technology solutions
+**Customer Strategy:**
+- Presented enterprise technology vision to strategic customers
+- Created new revenue streams through advancded compute, network, and storage technology solutions
 - Developed key engagement with Dell's most strategic, large enterprise, global customers
 
 **Team Development & Leadership:**
-- Mentored field teams on security best practices and emerging security technologies
+- Mentored field teams on network and security best practices and emerging technologies
 - Coached Dell's global network team across Server, Storage, and Networking Divisions
 - Provided leadership for both Regional and Annual Sales Meetings
 
@@ -352,11 +352,11 @@ Western Illinois University & University of Iowa
 
 ## AWARDS & INDUSTRY RECOGNITION
 
-**Systems Engineer of the Year (2014)** - Brocade/Vyatta (Enterprise Security Excellence)  
-**Service Provider Team of the Year (2015)** - Brocade/Vyatta (Security Innovation Leadership)  
+**Systems Engineer of the Year (2014)** - Brocade/Vyatta (Enterprise Architecture Excellence)  
+**Service Provider Team of the Year (2015)** - Brocade/Vyatta (Innovation Leadership)  
 **Challenger Team of the Year (2015)** - Brocade/Vyatta  
-**Enterprise Master (2013)** - Dell (Strategic Security Leadership)  
-**President's Club Award (2009)** - Brocade (Security Implementation Excellence)  
+**Enterprise Master (2013)** - Dell (Strategic Technlogly Leadership)  
+**President's Club Award (2009)** - Brocade (Technology Implementation Excellence)  
 **Enterprise Architecture Leader (2005)** - John Deere  
 **Top Social Media Ranked Employee (2016 & 2017)** - Brocade/Vyatta
 

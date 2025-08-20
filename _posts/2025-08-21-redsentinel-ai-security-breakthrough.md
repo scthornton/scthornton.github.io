@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "RedSentinel: AI Security Breakthrough with 100% Attack Detection Accuracy"
-date: 2025-08-20
+date: 2025-08-21
 categories: [ai-ml, security, python, machine-learning]
 tags: [ai-security, red-teaming, machine-learning, threat-detection, llm-security, prompt-injection]
 description: "Building a production-ready AI security system that achieves perfect classification performance on real-world attack data"

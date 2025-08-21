@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "RedSentinel: From Research Prototype to Production-Ready AI Security Tool"
+title: "RedSentinel: From Research Prototype to Production-Ready AI Security Tool (Part 1)"
 date: 2025-08-20
 categories: [ai-ml, security, python, machine-learning]
 tags: [ai-security, red-teaming, machine-learning, overfitting, feature-engineering, production-deployment]
@@ -8,7 +8,16 @@ description: "The complete story of RedSentinel - from discovering overfitting i
 excerpt: "A comprehensive look at how RedSentinel evolved from an overfitting research prototype to a production-ready AI security tool through systematic problem-solving and honest assessment."
 ---
 
-# RedSentinel: From Research Prototype to Production-Ready AI Security Tool
+# RedSentinel: From Research Prototype to Production-Ready AI Security Tool (Part 1)
+
+## 📚 Reading Order
+
+**This is Part 1 of the RedSentinel series. For the complete story, read in this order:**
+
+1. **Part 1 (This Post)**: RedSentinel: From Research Prototype to Production-Ready AI Security Tool
+2. **Part 2**: [RedSentinel Development Journey: From Overpromising to Production-Ready System](https://scthornton.github.io/ai-ml/security/python/machine-learning/2025/08/20/02-redsentinel-development-journey-from-overpromising-to-honest-assessment.html)
+
+---
 
 ## Executive Summary
 
@@ -517,7 +526,7 @@ RedSentinel started as an overpromising prototype but has evolved into a **credi
 *This post documents the complete technical journey of RedSentinel, demonstrating advanced machine learning expertise, systematic problem-solving, and the ability to build production-ready security tools.*
 
 **Repository**: [https://github.com/scthornton/red-sentinel](https://github.com/scthornton/red-sentinel)  
-**Development Journey**: [RedSentinel Development Journey: From Research Prototype to Production-Ready AI Security Tool](https://scthornton.github.io/ai-ml/security/python/machine-learning/2025/08/20/redsentinel-development-journey-from-overpromising-to-honest-assessment.html)  
+**Development Journey**: [RedSentinel Development Journey: From Research Prototype to Production-Ready AI Security Tool](https://scthornton.github.io/ai-ml/security/python/machine-learning/2025/08/20/02-redsentinel-development-journey-from-overpromising-to-honest-assessment.html)  
 **Results**: [Overfitting Problem SOLVED!](https://github.com/scthornton/red-sentinel/blob/main/results/OVERFITTING_SOLVED.md)
 
 **Tags:** #ai-security, #red-teaming, #machine-learning, #threat-detection, #llm-security, #prompt-injection, #overfitting, #feature-engineering, #production-deployment

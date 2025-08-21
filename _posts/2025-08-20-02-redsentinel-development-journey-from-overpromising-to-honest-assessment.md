@@ -410,5 +410,5 @@ RedSentinel started as an overpromising prototype but has evolved into a **credi
 *This post documents the complete technical journey of RedSentinel, demonstrating advanced machine learning expertise, systematic problem-solving, and the ability to build production-ready security tools.*
 
 **Repository**: [https://github.com/scthornton/red-sentinel](https://github.com/scthornton/red-sentinel)  
-**Previous Post**: [RedSentinel: AI Security Breakthrough with 100% Attack Detection Accuracy](https://scthornton.github.io/2025/08/20/redsentinel-ai-security-breakthrough.html)  
+**Previous Post**: [RedSentinel: AI Security Breakthrough with 100% Attack Detection Accuracy](https://scthornton.github.io/2025/08/20/01-redsentinel-ai-security-breakthrough.html)  
 **Results**: [Overfitting Problem SOLVED!](https://github.com/scthornton/red-sentinel/blob/main/results/OVERFITTING_SOLVED.md)
